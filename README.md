@@ -1,4 +1,4 @@
-[![Logo](/logo.png)](https://30secondsofcode.org/)
+[![Logo](/logo.png)](https://github.com/ConardLi/30-seconds-of-code-Zh-CN)
 
 # 30 seconds of code
 
@@ -7,8 +7,6 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![ProductHunt](https://img.shields.io/badge/producthunt-vote-orange.svg)](https://www.producthunt.com/posts/30-seconds-of-code) [![Gitter chat](https://img.shields.io/badge/chat-on%20gitter-4FB999.svg)](https://gitter.im/30-seconds-of-code/Lobby) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 > 你可以在30秒或更短的时间内理解的有用的javascript片段的精选集。
-
-[![Sponsored by DigitalOcean](/sponsored_by_DigitalOcean.png)](https://www.digitalocean.com)
 
 * Use <kbd>Ctrl</kbd> + <kbd>F</kbd> or <kbd>command</kbd> + <kbd>F</kbd> to search for a snippet.
 * Contributions welcome, please read the [contribution guide](CONTRIBUTING.md).
