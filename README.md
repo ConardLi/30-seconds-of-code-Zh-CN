@@ -4,22 +4,17 @@
 
 > 你可以在30秒或更短的时间内理解的有用的javascript片段的精选集。
 
-* Use <kbd>Ctrl</kbd> + <kbd>F</kbd> or <kbd>command</kbd> + <kbd>F</kbd> to search for a snippet.
-* Contributions welcome, please read the [contribution guide](CONTRIBUTING.md).
-* Snippets are written in ES6, use the [Babel transpiler](https://babeljs.io/) to ensure backwards-compatibility.
-* You can import these snippets into VSCode, by following the instructions found [here](https://github.com/30-seconds/30-seconds-of-code/tree/master/vscode_snippets).
-* You can search, view and copy these snippets from a terminal, using the CLI application from [this repo](https://github.com/sQVe/30s).
-* If you want to follow 30-seconds-of-code on social media, you can find us on [Facebook](https://www.facebook.com/30secondsofcode), [Instagram](https://www.instagram.com/30secondsofcode) and [Twitter](https://twitter.com/30secondsofcode).
+* 使用 <kbd>Ctrl</kbd> + <kbd>F</kbd> or <kbd>command</kbd> + <kbd>F</kbd> 来搜索一个片段.
 
 
-## Contents
+## 目录
 
-### 🔌 Adapter
+### 🔌 [Adapter](/Adapter.md)
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
-* [`ary`](#ary)
+* [`ary`](/Adapter.md#ary)
 * [`call`](#call)
 * [`collectInto`](#collectinto)
 * [`flip`](#flip)
@@ -30,14 +25,14 @@
 * [`promisify`](#promisify)
 * [`rearg`](#rearg)
 * [`spreadOver`](#spreadover)
-* [`unary`](#unary)
+* [`unary`](/Adapter.md#unary)
 
 </details>
 
 ### 📚 Array
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`all`](#all)
 * [`allEqual`](#allequal)
@@ -138,7 +133,7 @@
 ### 🌐 Browser
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`arrayToHtmlList`](#arraytohtmllist)
 * [`bottomVisible`](#bottomvisible)
@@ -182,7 +177,7 @@
 ### ⏱️ Date
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`dayOfYear`](#dayofyear)
 * [`formatDuration`](#formatduration)
@@ -201,7 +196,7 @@
 ### 🎛️ Function
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`attempt`](#attempt)
 * [`bind`](#bind)
@@ -234,7 +229,7 @@
 ### ➗ Math
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`approximatelyEqual`](#approximatelyequal)
 * [`average`](#average)
@@ -281,7 +276,7 @@
 ### 📦 Node
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`atob`](#atob)
 * [`btoa`](#btoa)
@@ -304,7 +299,7 @@
 ### 🗃️ Object
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`bindAll`](#bindall)
 * [`deepClone`](#deepclone)
@@ -347,7 +342,7 @@
 ### 📜 String
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`byteSize`](#bytesize)
 * [`capitalize`](#capitalize)
@@ -389,7 +384,7 @@
 ### 📃 Type
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`getType`](#gettype)
 * [`is`](#is)
@@ -415,7 +410,7 @@
 ### 🔧 Utility
 
 <details>
-<summary>View contents</summary>
+<summary>查看目录</summary>
 
 * [`castArray`](#castarray)
 * [`cloneRegExp`](#cloneregexp)
