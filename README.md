@@ -463,7 +463,7 @@ const firstTwoMax = ary(Math.max, 2);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### call
 
@@ -490,7 +490,7 @@ Promise.resolve([1, 2, 3])
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### collectInto
 
@@ -515,7 +515,7 @@ Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### flip
 
@@ -542,7 +542,7 @@ Object.assign(b, a); // == b
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### over
 
@@ -564,7 +564,7 @@ minMax(1, 2, 3, 4, 5); // [1,5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### overArgs
 
@@ -588,7 +588,7 @@ fn(9, 3); // [81, 6]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pipeAsyncFunctions
 
@@ -620,7 +620,7 @@ const sum = pipeAsyncFunctions(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pipeFunctions
 
@@ -645,7 +645,7 @@ multiplyAndAdd5(5, 2); // 15
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### promisify
 
@@ -673,7 +673,7 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### rearg
 
@@ -700,7 +700,7 @@ rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### spreadOver
 
@@ -722,7 +722,7 @@ arrayMax([1, 2, 3]); // 3
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unary
 
@@ -743,7 +743,7 @@ const unary = fn => val => fn(val);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -771,7 +771,7 @@ all([1, 2, 3]); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### allEqual
 
@@ -793,7 +793,7 @@ allEqual([1, 1, 1, 1]); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### any
 
@@ -816,7 +816,7 @@ any([0, 0, 1, 0]); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### arrayToCSV
 
@@ -841,7 +841,7 @@ arrayToCSV([['a', 'b'], ['c', 'd']], ';'); // '"a";"b"\n"c";"d"'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### bifurcate
 
@@ -863,7 +863,7 @@ bifurcate(['beep', 'boop', 'foo', 'bar'], [true, true, false, true]); // [ ['bee
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### bifurcateBy
 
@@ -885,7 +885,7 @@ bifurcateBy(['beep', 'boop', 'foo', 'bar'], x => x[0] === 'b'); // [ ['beep', 'b
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### chunk
 
@@ -911,7 +911,7 @@ chunk([1, 2, 3, 4, 5], 2); // [[1,2],[3,4],[5]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### compact
 
@@ -932,7 +932,7 @@ compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]); // [ 1, 2, 3, 'a'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### countBy
 
@@ -959,7 +959,7 @@ countBy(['one', 'two', 'three'], 'length'); // {3: 2, 5: 1}
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### countOccurrences
 
@@ -980,7 +980,7 @@ countOccurrences([1, 1, 2, 1, 2, 3], 1); // 3
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### deepFlatten
 
@@ -1003,7 +1003,7 @@ deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### difference
 
@@ -1027,7 +1027,7 @@ difference([1, 2, 3], [1, 2, 4]); // [3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### differenceBy
 
@@ -1052,7 +1052,7 @@ differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], v => v.x); // [ { x: 2 } ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### differenceWith
 
@@ -1073,7 +1073,7 @@ differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Mat
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### drop
 
@@ -1096,7 +1096,7 @@ drop([1, 2, 3], 42); // []
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### dropRight
 
@@ -1119,7 +1119,7 @@ dropRight([1, 2, 3], 42); // []
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### dropRightWhile
 
@@ -1144,7 +1144,7 @@ dropRightWhile([1, 2, 3, 4], n => n < 3); // [1, 2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### dropWhile
 
@@ -1169,7 +1169,7 @@ dropWhile([1, 2, 3, 4], n => n >= 3); // [3,4]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### everyNth
 
@@ -1190,7 +1190,7 @@ everyNth([1, 2, 3, 4, 5, 6], 2); // [ 2, 4, 6 ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### filterFalsy
 
@@ -1211,7 +1211,7 @@ filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true, {}, 'sample', 1]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### filterNonUnique
 
@@ -1232,7 +1232,7 @@ filterNonUnique([1, 2, 2, 3, 4, 4, 5]); // [1, 3, 5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### filterNonUniqueBy
 
@@ -1264,7 +1264,7 @@ filterNonUniqueBy(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### findLast
 
@@ -1285,7 +1285,7 @@ findLast([1, 2, 3, 4], n => n % 2 === 1); // 3
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### findLastIndex
 
@@ -1311,7 +1311,7 @@ findLastIndex([1, 2, 3, 4], n => n % 2 === 1); // 2 (index of the value 3)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### flatten
 
@@ -1337,7 +1337,7 @@ flatten([1, [2, [3, [4, 5], 6], 7], 8], 2); // [1, 2, 3, [4, 5], 6, 7, 8]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### forEachRight
 
@@ -1362,7 +1362,7 @@ forEachRight([1, 2, 3, 4], val => console.log(val)); // '4', '3', '2', '1'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### groupBy
 
@@ -1389,7 +1389,7 @@ groupBy(['one', 'two', 'three'], 'length'); // {3: ['one', 'two'], 5: ['three']}
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### head
 
@@ -1410,7 +1410,7 @@ head([1, 2, 3]); // 1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### indexOfAll
 
@@ -1434,7 +1434,7 @@ indexOfAll([1, 2, 3], 4); // []
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initial
 
@@ -1455,7 +1455,7 @@ initial([1, 2, 3]); // [1,2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initialize2DArray
 
@@ -1477,7 +1477,7 @@ initialize2DArray(2, 2, 0); // [[0,0], [0,0]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initializeArrayWithRange
 
@@ -1503,7 +1503,7 @@ initializeArrayWithRange(9, 0, 2); // [0,2,4,6,8]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initializeArrayWithRangeRight
 
@@ -1531,7 +1531,7 @@ initializeArrayWithRangeRight(9, 0, 2); // [8,6,4,2,0]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initializeArrayWithValues
 
@@ -1553,7 +1553,7 @@ initializeArrayWithValues(5, 2); // [2, 2, 2, 2, 2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### initializeNDArray
 
@@ -1579,7 +1579,7 @@ initializeNDArray(5, 2, 2, 2); // [[[5,5],[5,5]],[[5,5],[5,5]]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### intersection
 
@@ -1603,7 +1603,7 @@ intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### intersectionBy
 
@@ -1627,7 +1627,7 @@ intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [2.1]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### intersectionWith
 
@@ -1648,7 +1648,7 @@ intersectionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) 
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isSorted
 
@@ -1680,7 +1680,7 @@ isSorted([4, 3, 5]); // 0
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### join
 
@@ -1715,7 +1715,7 @@ join(['pen', 'pineapple', 'apple', 'pen']); // "pen,pineapple,apple,pen"
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### JSONtoCSV ![advanced](/advanced.svg)
 
@@ -1749,7 +1749,7 @@ JSONtoCSV([{ a: 1, b: 2 }, { a: 3, b: 4, c: 5 }, { a: 6 }, { b: 7 }], ['a', 'b']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### last
 
@@ -1770,7 +1770,7 @@ last([1, 2, 3]); // 3
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### longestItem
 
@@ -1797,7 +1797,7 @@ longestItem([1, 2, 3], 'foobar'); // 'foobar'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### mapObject ![advanced](/advanced.svg)
 
@@ -1822,7 +1822,7 @@ squareIt([1, 2, 3]); // { 1: 1, 2: 4, 3: 9 }
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### maxN
 
@@ -1847,7 +1847,7 @@ maxN([1, 2, 3], 2); // [3,2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### minN
 
@@ -1872,7 +1872,7 @@ minN([1, 2, 3], 2); // [1,2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### none
 
@@ -1895,7 +1895,7 @@ none([0, 0, 0]); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### nthElement
 
@@ -1919,7 +1919,7 @@ nthElement(['a', 'b', 'b'], -3); // 'a'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### offset
 
@@ -1943,7 +1943,7 @@ offset([1, 2, 3, 4, 5], -2); // [4, 5, 1, 2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### partition
 
@@ -1973,7 +1973,7 @@ partition(users, o => o.active); // [[{ 'user': 'fred',    'age': 40, 'active': 
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### permutations ![advanced](/advanced.svg)
 
@@ -2008,7 +2008,7 @@ permutations([1, 33, 5]); // [ [ 1, 33, 5 ], [ 1, 5, 33 ], [ 33, 1, 5 ], [ 33, 5
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pull
 
@@ -2038,7 +2038,7 @@ pull(myArray, 'a', 'c'); // myArray = [ 'b', 'b' ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pullAtIndex ![advanced](/advanced.svg)
 
@@ -2070,7 +2070,7 @@ let pulled = pullAtIndex(myArray, [1, 3]); // myArray = [ 'a', 'c' ] , pulled = 
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pullAtValue ![advanced](/advanced.svg)
 
@@ -2101,7 +2101,7 @@ let pulled = pullAtValue(myArray, ['b', 'd']); // myArray = [ 'a', 'c' ] , pulle
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pullBy ![advanced](/advanced.svg)
 
@@ -2134,7 +2134,7 @@ pullBy(myArray, [{ x: 1 }, { x: 3 }], o => o.x); // myArray = [{ x: 2 }]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### reducedFilter
 
@@ -2175,7 +2175,7 @@ reducedFilter(data, ['id', 'name'], item => item.age > 24); // [{ id: 2, name: '
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### reduceSuccessive
 
@@ -2197,7 +2197,7 @@ reduceSuccessive([1, 2, 3, 4, 5, 6], (acc, val) => acc + val, 0); // [0, 1, 3, 6
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### reduceWhich
 
@@ -2225,7 +2225,7 @@ reduceWhich(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### reject
 
@@ -2245,7 +2245,7 @@ reject(word => word.length > 4, ['Apple', 'Pear', 'Kiwi', 'Banana']); // ['Pear'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### remove
 
@@ -2274,7 +2274,7 @@ remove([1, 2, 3, 4], n => n % 2 === 0); // [2, 4]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sample
 
@@ -2296,7 +2296,7 @@ sample([3, 7, 9, 11]); // 9
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sampleSize
 
@@ -2327,7 +2327,7 @@ sampleSize([1, 2, 3], 4); // [2,3,1]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### shank
 
@@ -2358,7 +2358,7 @@ console.log(names); // ['alpha', 'bravo', 'charlie']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### shuffle
 
@@ -2387,7 +2387,7 @@ shuffle(foo); // [2, 3, 1], foo = [1, 2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### similarity
 
@@ -2408,7 +2408,7 @@ similarity([1, 2, 3], [1, 2, 4]); // [1, 2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sortedIndex
 
@@ -2435,7 +2435,7 @@ sortedIndex([30, 50], 40); // 1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sortedIndexBy
 
@@ -2462,7 +2462,7 @@ sortedIndexBy([{ x: 4 }, { x: 5 }], { x: 4 }, o => o.x); // 0
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sortedLastIndex
 
@@ -2488,7 +2488,7 @@ sortedLastIndex([10, 20, 30, 30, 40], 30); // 4
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sortedLastIndexBy
 
@@ -2519,7 +2519,7 @@ sortedLastIndexBy([{ x: 4 }, { x: 5 }], { x: 4 }, o => o.x); // 1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### stableSort ![advanced](/advanced.svg)
 
@@ -2548,7 +2548,7 @@ const stable = stableSort(arr, () => 0); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### symmetricDifference
 
@@ -2574,7 +2574,7 @@ symmetricDifference([1, 2, 2], [1, 3, 1]); // [2, 2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### symmetricDifferenceBy
 
@@ -2599,7 +2599,7 @@ symmetricDifferenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [ 1.2, 3.4 ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### symmetricDifferenceWith
 
@@ -2627,7 +2627,7 @@ symmetricDifferenceWith(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### tail
 
@@ -2649,7 +2649,7 @@ tail([1]); // [1]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### take
 
@@ -2671,7 +2671,7 @@ take([1, 2, 3], 0); // []
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### takeRight
 
@@ -2693,7 +2693,7 @@ takeRight([1, 2, 3]); // [3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### takeRightWhile
 
@@ -2715,7 +2715,7 @@ takeRightWhile([1, 2, 3, 4], n => n < 3); // [3, 4]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### takeWhile
 
@@ -2740,7 +2740,7 @@ takeWhile([1, 2, 3, 4], n => n >= 3); // [1, 2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### toHash
 
@@ -2778,7 +2778,7 @@ managers; // [ { manager:1, employees: [ { id: 2, first: "Joe" }, { id: 3, first
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### union
 
@@ -2799,7 +2799,7 @@ union([1, 2, 3], [4, 3, 2]); // [1,2,3,4]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unionBy
 
@@ -2825,7 +2825,7 @@ unionBy([2.1], [1.2, 2.3], Math.floor); // [2.1, 1.2]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unionWith
 
@@ -2847,7 +2847,7 @@ unionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) === Mat
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### uniqueElements
 
@@ -2868,7 +2868,7 @@ uniqueElements([1, 2, 2, 3, 4, 4, 5]); // [1, 2, 3, 4, 5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### uniqueElementsBy
 
@@ -2903,7 +2903,7 @@ uniqueElementsBy(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### uniqueElementsByRight
 
@@ -2938,7 +2938,7 @@ uniqueElementsByRight(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### uniqueSymmetricDifference
 
@@ -2962,7 +2962,7 @@ uniqueSymmetricDifference([1, 2, 2], [1, 3, 1]); // [2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unzip
 
@@ -2991,7 +2991,7 @@ unzip([['a', 1, true], ['b', 2]]); // [['a', 'b'], [1, 2], [true]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unzipWith ![advanced](/advanced.svg)
 
@@ -3022,7 +3022,7 @@ unzipWith([[1, 10, 100], [2, 20, 200]], (...args) => args.reduce((acc, v) => acc
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### without
 
@@ -3045,7 +3045,7 @@ without([2, 1, 2, 3], 1, 2); // [3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### xProd
 
@@ -3066,7 +3066,7 @@ xProd([1, 2], ['a', 'b']); // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### zip
 
@@ -3095,7 +3095,7 @@ zip(['a'], [1, 2], [true, false]); // [['a', 1, true], [undefined, 2, false]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### zipObject
 
@@ -3118,7 +3118,7 @@ zipObject(['a', 'b'], [1, 2, 3]); // {a: 1, b: 2}
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### zipWith ![advanced](/advanced.svg)
 
@@ -3155,7 +3155,7 @@ zipWith(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -3185,7 +3185,7 @@ arrayToHtmlList(['item 1', 'item 2'], 'myListID');
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### bottomVisible
 
@@ -3208,7 +3208,7 @@ bottomVisible(); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### copyToClipboard ![advanced](/advanced.svg)
 
@@ -3252,7 +3252,7 @@ copyToClipboard('Lorem ipsum'); // 'Lorem ipsum' copied to clipboard.
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### counter ![advanced](/advanced.svg)
 
@@ -3287,7 +3287,7 @@ counter('#my-id', 1, 1000, 5, 2000); // Creates a 2-second timer for the element
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### createElement
 
@@ -3320,7 +3320,7 @@ console.log(el.className); // 'container'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### createEventHub ![advanced](/advanced.svg)
 
@@ -3373,7 +3373,7 @@ hub.off('message', handler);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### currentURL
 
@@ -3394,7 +3394,7 @@ currentURL(); // 'https://google.com'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### detectDeviceType
 
@@ -3418,7 +3418,7 @@ detectDeviceType(); // "Mobile" or "Desktop"
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### elementContains
 
@@ -3440,7 +3440,7 @@ elementContains(document.querySelector('body'), document.querySelector('body'));
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### elementIsVisibleInViewport ![advanced](/advanced.svg)
 
@@ -3473,7 +3473,7 @@ elementIsVisibleInViewport(el, true); // true - (partially visible)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getImages
 
@@ -3498,7 +3498,7 @@ getImages(document, false); // ['image1.jpg', 'image2.png', '...']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getScrollPosition
 
@@ -3523,7 +3523,7 @@ getScrollPosition(); // {x: 0, y: 200}
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getStyle
 
@@ -3544,7 +3544,7 @@ getStyle(document.querySelector('p'), 'font-size'); // '16px'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hasClass
 
@@ -3565,7 +3565,7 @@ hasClass(document.querySelector('p.special'), 'special'); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hashBrowser ![advanced](/advanced.svg)
 
@@ -3593,7 +3593,7 @@ hashBrowser(JSON.stringify({ a: 'a', b: [1, 2, 3, 4], foo: { c: 'bar' } })).then
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hide
 
@@ -3614,7 +3614,7 @@ hide(document.querySelectorAll('img')); // Hides all <img> elements on the page
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### httpsRedirect
 
@@ -3637,7 +3637,7 @@ httpsRedirect(); // If you are on http://mydomain.com, you are redirected to htt
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### insertAfter
 
@@ -3658,7 +3658,7 @@ insertAfter(document.getElementById('myId'), '<p>after</p>'); // <div id="myId">
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### insertBefore
 
@@ -3679,7 +3679,7 @@ insertBefore(document.getElementById('myId'), '<p>before</p>'); // <p>before</p>
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isBrowserTabFocused
 
@@ -3700,7 +3700,7 @@ isBrowserTabFocused(); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### nodeListToArray
 
@@ -3721,7 +3721,7 @@ nodeListToArray(document.childNodes); // [ <!DOCTYPE html>, html ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### observeMutations ![advanced](/advanced.svg)
 
@@ -3762,7 +3762,7 @@ obs.disconnect(); // Disconnects the observer and stops logging mutations on the
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### off
 
@@ -3786,7 +3786,7 @@ off(document.body, 'click', fn); // no longer logs '!' upon clicking on the page
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### on
 
@@ -3816,7 +3816,7 @@ on(document.body, 'click', fn, { options: true }); // use capturing instead of b
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### onUserInputChange ![advanced](/advanced.svg)
 
@@ -3854,7 +3854,7 @@ onUserInputChange(type => {
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### prefix
 
@@ -3883,7 +3883,7 @@ prefix('appearance'); // 'appearance' on a supported browser, otherwise 'webkitA
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### recordAnimationFrames
 
@@ -3930,7 +3930,7 @@ const recorder2 = recordAnimationFrames(cb, false); // `start` needs to be expli
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### redirect
 
@@ -3953,7 +3953,7 @@ redirect('https://google.com');
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### runAsync ![advanced](/advanced.svg)
 
@@ -4005,7 +4005,7 @@ runAsync(() => typeof outsideVariable).then(console.log); // 'undefined'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### scrollToTop
 
@@ -4033,7 +4033,7 @@ scrollToTop();
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### setStyle
 
@@ -4054,7 +4054,7 @@ setStyle(document.querySelector('p'), 'font-size', '20px'); // The first <p> ele
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### show
 
@@ -4075,7 +4075,7 @@ show(...document.querySelectorAll('img')); // Shows all <img> elements on the pa
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### smoothScroll
 
@@ -4101,7 +4101,7 @@ smoothScroll('.fooBar'); // scrolls smoothly to the first element with a class o
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### toggleClass
 
@@ -4122,7 +4122,7 @@ toggleClass(document.querySelector('p.special'), 'special'); // The paragraph wi
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### triggerEvent
 
@@ -4147,7 +4147,7 @@ triggerEvent(document.getElementById('myId'), 'click', { username: 'bob' });
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### UUIDGeneratorBrowser
 
@@ -4171,7 +4171,7 @@ UUIDGeneratorBrowser(); // '7982fcfe-5721-4632-bede-6000885be57d'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -4199,7 +4199,7 @@ dayOfYear(new Date()); // 272
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### formatDuration
 
@@ -4237,7 +4237,7 @@ formatDuration(34325055574); // '397 days, 6 hours, 44 minutes, 15 seconds, 574 
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getColonTimeFromDate
 
@@ -4258,7 +4258,7 @@ getColonTimeFromDate(new Date()); // "08:38:00"
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getDaysDiffBetweenDates
 
@@ -4280,7 +4280,7 @@ getDaysDiffBetweenDates(new Date('2017-12-13'), new Date('2017-12-22')); // 9
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### getMeridiemSuffixOfInteger
 
@@ -4311,7 +4311,7 @@ getMeridiemSuffixOfInteger(25); // "1pm"
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isAfterDate
 
@@ -4332,7 +4332,7 @@ isAfterDate(new Date(2010, 10, 21), new Date(2010, 10, 20)); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isBeforeDate
 
@@ -4353,7 +4353,7 @@ isBeforeDate(new Date(2010, 10, 20), new Date(2010, 10, 21)); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isSameDate
 
@@ -4374,7 +4374,7 @@ isSameDate(new Date(2010, 10, 20), new Date(2010, 10, 20)); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### maxDate
 
@@ -4401,7 +4401,7 @@ maxDate(array); // 2018-03-11T22:00:00.000Z
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### minDate
 
@@ -4428,7 +4428,7 @@ minDate(array); // 2016-01-08T22:00:00.000Z
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### tomorrow
 
@@ -4454,7 +4454,7 @@ tomorrow(); // 2018-10-18 (if current date is 2018-10-18)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -4489,7 +4489,7 @@ if (elements instanceof Error) elements = []; // elements = []
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### bind
 
@@ -4516,7 +4516,7 @@ console.log(freddyBound('hi', '!')); // 'hi fred!'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### bindKey
 
@@ -4546,7 +4546,7 @@ console.log(freddyBound('hi', '!')); // 'hi fred!'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### chainAsync
 
@@ -4587,7 +4587,7 @@ chainAsync([
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### compose
 
@@ -4615,7 +4615,7 @@ multiplyAndAdd5(5, 2); // 15
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### composeRight
 
@@ -4640,7 +4640,7 @@ addAndSquare(1, 2); // 9
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### converge
 
@@ -4666,7 +4666,7 @@ average([1, 2, 3, 4, 5, 6, 7]); // 4
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### curry
 
@@ -4692,7 +4692,7 @@ curry(Math.min, 3)(10)(50)(2); // 2
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### debounce
 
@@ -4726,7 +4726,7 @@ window.addEventListener(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### defer
 
@@ -4753,7 +4753,7 @@ defer(longRunningFunction); // Browser will update the HTML then run the functio
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### delay
 
@@ -4781,7 +4781,7 @@ delay(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### functionName
 
@@ -4802,7 +4802,7 @@ functionName(Math.max); // max (logged in debug channel of console)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hz
 
@@ -4845,7 +4845,7 @@ Math.round(hz(sumForLoop)); // 4784
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### memoize ![advanced](/advanced.svg)
 
@@ -4879,7 +4879,7 @@ console.log(anagramsCached.cache); // The cached anagrams map
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### negate
 
@@ -4900,7 +4900,7 @@ const negate = func => (...args) => !func(...args);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### once
 
@@ -4932,7 +4932,7 @@ document.body.addEventListener('click', once(startApp)); // only runs `startApp`
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### partial
 
@@ -4955,7 +4955,7 @@ greetHello('John'); // 'Hello John!'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### partialRight
 
@@ -4978,7 +4978,7 @@ greetJohn('Hello'); // 'Hello John!'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### runPromisesInSeries
 
@@ -5000,7 +5000,7 @@ runPromisesInSeries([() => delay(1000), () => delay(2000)]); // Executes each pr
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sleep
 
@@ -5025,7 +5025,7 @@ async function sleepyWork() {
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### throttle ![advanced](/advanced.svg)
 
@@ -5074,7 +5074,7 @@ window.addEventListener(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### times
 
@@ -5101,7 +5101,7 @@ console.log(output); // 01234
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### uncurry
 
@@ -5132,7 +5132,7 @@ uncurriedAdd(1, 2, 3); // 6
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unfold
 
@@ -5160,7 +5160,7 @@ unfold(f, 10); // [-10, -20, -30, -40, -50]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### when
 
@@ -5183,7 +5183,7 @@ doubleEvenNumbers(1); // 1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -5210,7 +5210,7 @@ approximatelyEqual(Math.PI / 2.0, 1.5708); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### average
 
@@ -5232,7 +5232,7 @@ average(1, 2, 3); // 2
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### averageBy
 
@@ -5256,7 +5256,7 @@ averageBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n'); // 5
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### binomialCoefficient
 
@@ -5290,7 +5290,7 @@ binomialCoefficient(8, 2); // 28
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### clampNumber
 
@@ -5313,7 +5313,7 @@ clampNumber(1, -1, -5); // -1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### degreesToRads
 
@@ -5334,7 +5334,7 @@ degreesToRads(90.0); // ~1.5708
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### digitize
 
@@ -5356,7 +5356,7 @@ digitize(123); // [1, 2, 3]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### distance
 
@@ -5377,7 +5377,7 @@ distance(1, 1, 2, 3); // 2.23606797749979
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### elo ![advanced](/advanced.svg)
 
@@ -5427,7 +5427,7 @@ own individual rating by supplying it as the third argument.
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### factorial
 
@@ -5459,7 +5459,7 @@ factorial(6); // 720
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### fibonacci
 
@@ -5485,7 +5485,7 @@ fibonacci(6); // [0, 1, 1, 2, 3, 5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### gcd
 
@@ -5512,7 +5512,7 @@ gcd(...[12, 8, 32]); // 4
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### geometricProgression
 
@@ -5541,7 +5541,7 @@ geometricProgression(256, 1, 4); // [1, 4, 16, 64, 256]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hammingDistance
 
@@ -5563,7 +5563,7 @@ hammingDistance(2, 3); // 1
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### inRange
 
@@ -5591,7 +5591,7 @@ inRange(3, 2); // false
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isDivisible
 
@@ -5612,7 +5612,7 @@ isDivisible(6, 3); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isEven
 
@@ -5634,7 +5634,7 @@ isEven(3); // false
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isNegativeZero
 
@@ -5656,7 +5656,7 @@ isNegativeZero(0); // false
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isPrime
 
@@ -5682,7 +5682,7 @@ isPrime(11); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### lcm
 
@@ -5709,7 +5709,7 @@ lcm(...[1, 3, 4, 5]); // 60
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### luhnCheck ![advanced](/advanced.svg)
 
@@ -5745,7 +5745,7 @@ luhnCheck(123456789); // false
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### maxBy
 
@@ -5767,7 +5767,7 @@ maxBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n'); // 8
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### median
 
@@ -5793,7 +5793,7 @@ median([5, 6, 50, 1, -5]); // 5
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### midpoint
 
@@ -5817,7 +5817,7 @@ midpoint([1, 3], [2, 4]); // [1.5, 3.5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### minBy
 
@@ -5839,7 +5839,7 @@ minBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n'); // 2
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### percentile
 
@@ -5861,7 +5861,7 @@ percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6); // 55
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### powerset
 
@@ -5882,7 +5882,7 @@ powerset([1, 2]); // [[], [1], [2], [2, 1]]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### primes
 
@@ -5909,7 +5909,7 @@ primes(10); // [2,3,5,7]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### radsToDegrees
 
@@ -5930,7 +5930,7 @@ radsToDegrees(Math.PI / 2); // 90
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### randomIntArrayInRange
 
@@ -5952,7 +5952,7 @@ randomIntArrayInRange(12, 35, 10); // [ 34, 14, 27, 17, 30, 27, 20, 26, 21, 14 ]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### randomIntegerInRange
 
@@ -5973,7 +5973,7 @@ randomIntegerInRange(0, 5); // 2
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### randomNumberInRange
 
@@ -5994,7 +5994,7 @@ randomNumberInRange(2, 10); // 6.0211363285087005
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### round
 
@@ -6016,7 +6016,7 @@ round(1.005, 2); // 1.01
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sdbm
 
@@ -6044,7 +6044,7 @@ sdbm('name'); // -3521204949
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### standardDeviation
 
@@ -6074,7 +6074,7 @@ standardDeviation([10, 2, 38, 23, 38, 23, 21], true); // 12.29899614287479 (popu
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sum
 
@@ -6096,7 +6096,7 @@ sum(...[1, 2, 3, 4]); // 10
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sumBy
 
@@ -6119,7 +6119,7 @@ sumBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n'); // 20
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### sumPower
 
@@ -6148,7 +6148,7 @@ sumPower(10, 3, 5); // 2925
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### toSafeInteger
 
@@ -6172,7 +6172,7 @@ toSafeInteger(Infinity); // 9007199254740991
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -6198,7 +6198,7 @@ atob('Zm9vYmFy'); // 'foobar'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### btoa
 
@@ -6219,7 +6219,7 @@ btoa('foobar'); // 'Zm9vYmFy'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### colorize
 
@@ -6260,7 +6260,7 @@ console.log(colorize(colorize('foo').yellow, colorize('foo').green).bgWhite); //
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### createDirIfNotExists
 
@@ -6282,7 +6282,7 @@ createDirIfNotExists('test'); // creates the directory 'test', if it doesn't exi
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hasFlags
 
@@ -6308,7 +6308,7 @@ hasFlags('special'); // false
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### hashNode
 
@@ -6342,7 +6342,7 @@ hashNode(JSON.stringify({ a: 'a', b: [1, 2, 3, 4], foo: { c: 'bar' } })).then(co
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isDuplexStream
 
@@ -6372,7 +6372,7 @@ isDuplexStream(new Stream.Duplex()); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isReadableStream
 
@@ -6400,7 +6400,7 @@ isReadableStream(fs.createReadStream('test.txt')); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isStream
 
@@ -6422,7 +6422,7 @@ isStream(fs.createReadStream('test.txt')); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isTravisCI
 
@@ -6443,7 +6443,7 @@ isTravisCI(); // true (if code is running on Travis CI)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### isWritableStream
 
@@ -6471,7 +6471,7 @@ isWritableStream(fs.createWriteStream('test.txt')); // true
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### JSONToFile
 
@@ -6494,7 +6494,7 @@ JSONToFile({ test: 'is passed' }, 'testJsonFile'); // writes the object to 'test
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### readFileLines
 
@@ -6531,7 +6531,7 @@ console.log(arr); // ['line1', 'line2', 'line3']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### untildify
 
@@ -6552,7 +6552,7 @@ untildify('~/node'); // '/Users/aUser/node'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### UUIDGeneratorNode
 
@@ -6577,7 +6577,7 @@ UUIDGeneratorNode(); // '79c7c136-60ee-40a2-beb2-856f1feabefc'
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
@@ -6618,7 +6618,7 @@ jQuery(element).on('click', view.click); // Logs 'clicked docs' when clicked.
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### deepClone
 
@@ -6652,7 +6652,7 @@ const b = deepClone(a); // a !== b, a.obj !== b.obj
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### deepFreeze
 
@@ -6682,7 +6682,7 @@ o[1][0] = 4; // not allowed as well
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### deepMapKeys ![advanced](/advanced.svg)
 
@@ -6743,7 +6743,7 @@ const upperKeysObj = deepMapKeys(obj, key => key.toUpperCase());
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### defaults
 
@@ -6764,7 +6764,7 @@ defaults({ a: 1 }, { b: 2 }, { b: 6 }, { a: 3 }); // { a: 1, b: 2 }
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### dig
 
@@ -6801,7 +6801,7 @@ dig(data, 'level4'); // undefined
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### equals ![advanced](/advanced.svg)
 
@@ -6833,7 +6833,7 @@ equals({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'f
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### findKey
 
@@ -6861,7 +6861,7 @@ findKey(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### findLastKey
 
@@ -6894,7 +6894,7 @@ findLastKey(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### flattenObject
 
@@ -6925,7 +6925,7 @@ flattenObject({ a: { b: { c: 1 } }, d: 1 }); // { 'a.b.c': 1, d: 1 }
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### forOwn
 
