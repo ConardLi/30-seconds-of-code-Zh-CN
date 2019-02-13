@@ -1,5 +1,7 @@
 [![Logo](/logo.png)](https://github.com/ConardLi/30-seconds-of-code-Zh-CN)
 
+## 目录
+
 * [`ary`](#ary)
 * [`call`](#call)
 * [`collectInto`](#collectinto)
@@ -18,16 +20,16 @@
 
 ### ary
 
-Creates a function that accepts up to `n` arguments, ignoring any additional arguments.
+创建一个可以接收n个参数的函数, 忽略其他额外的参数。
 
-Call the provided function, `fn`, with up to `n` arguments, using `Array.prototype.slice(0,n)` and the spread operator (`...`).
+调用提供的函数`fn`,参数最多为n个, 使用 `Array.prototype.slice(0,n)` 和展开操作符 (`...`)。
 
 ```js
 const ary = (fn, n) => (...args) => fn(...args.slice(0, n));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const firstTwoMax = ary(Math.max, 2);
@@ -36,20 +38,20 @@ const firstTwoMax = ary(Math.max, 2);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### call
 
-Given a key and a set of arguments, call them when given a context. Primarily useful in composition.
+给定一个key和一组参数，给定一个上下文时调用它们。主要用于合并。
 
-Use a closure to call a stored key with stored arguments.
+使用闭包调用上下文中key对应的值，即带有存储参数的函数。
 
 ```js
 const call = (key, ...args) => context => context[key](...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 Promise.resolve([1, 2, 3])
@@ -63,20 +65,20 @@ Promise.resolve([1, 2, 3])
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### collectInto
 
-Changes a function that accepts an array into a variadic function.
+将一个接收数组参数的函数改变为可变参数的函数。
 
-Given a function, return a closure that collects all inputs into an array-accepting function.
+给定一个函数，返回一个闭包，该闭包将所有输入收集到一个数组接受函数中。
 
 ```js
 const collectInto = fn => (...args) => fn(args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const Pall = collectInto(Promise.all.bind(Promise));
@@ -88,7 +90,7 @@ Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### flip
 
@@ -101,7 +103,7 @@ const flip = fn => (first, ...rest) => fn(...rest, first);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 let a = { name: 'John Smith' };
@@ -115,7 +117,7 @@ Object.assign(b, a); // == b
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### over
 
@@ -128,7 +130,7 @@ const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const minMax = over(Math.min, Math.max);
@@ -137,7 +139,7 @@ minMax(1, 2, 3, 4, 5); // [1,5]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### overArgs
 
@@ -150,7 +152,7 @@ const overArgs = (fn, transforms) => (...args) => fn(...args.map((val, i) => tra
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const square = n => n * n;
@@ -161,7 +163,7 @@ fn(9, 3); // [81, 6]
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pipeAsyncFunctions
 
@@ -176,7 +178,7 @@ const pipeAsyncFunctions = (...fns) => arg => fns.reduce((p, f) => p.then(f), Pr
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 
@@ -193,7 +195,7 @@ const sum = pipeAsyncFunctions(
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### pipeFunctions
 
@@ -207,7 +209,7 @@ const pipeFunctions = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add5 = x => x + 5;
@@ -218,7 +220,7 @@ multiplyAndAdd5(5, 2); // 15
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### promisify
 
@@ -237,7 +239,7 @@ const promisify = func => (...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const delay = promisify((d, cb) => setTimeout(cb, d));
@@ -246,7 +248,7 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### rearg
 
@@ -259,7 +261,7 @@ const rearg = (fn, indexes) => (...args) => fn(...indexes.map(i => args[i]));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var rearged = rearg(
@@ -273,7 +275,7 @@ rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### spreadOver
 
@@ -286,7 +288,7 @@ const spreadOver = fn => argsArr => fn(...argsArr);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const arrayMax = spreadOver(Math.max);
@@ -295,7 +297,7 @@ arrayMax([1, 2, 3]); // 3
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 ### unary
 
@@ -308,7 +310,7 @@ const unary = fn => val => fn(val);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 ['6', '8', '10'].map(unary(parseInt)); // [6, 8, 10]
@@ -316,7 +318,7 @@ const unary = fn => val => fn(val);
 
 </details>
 
-<br>[⬆ Back to top](#contents)
+<br>[⬆ 回到顶部](#目录)
 
 
 ---
