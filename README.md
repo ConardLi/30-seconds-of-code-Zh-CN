@@ -445,9 +445,9 @@
 
 ### ary
 
-Creates a function that accepts up to `n` arguments, ignoring any additional arguments.
+创建一个可以接收n个参数的函数, 忽略其他额外的参数。
 
-Call the provided function, `fn`, with up to `n` arguments, using `Array.prototype.slice(0,n)` and the spread operator (`...`).
+调用提供的函数`fn`,参数最多为n个, 使用 `Array.prototype.slice(0,n)` 和展开操作符 (`...`)。
 
 ```js
 const ary = (fn, n) => (...args) => fn(...args.slice(0, n));
@@ -467,9 +467,9 @@ const firstTwoMax = ary(Math.max, 2);
 
 ### call
 
-Given a key and a set of arguments, call them when given a context. Primarily useful in composition.
+给定一个key和一组参数，给定一个上下文时调用它们。主要用于合并。
 
-Use a closure to call a stored key with stored arguments.
+使用闭包调用上下文中key对应的值，即带有存储参数的函数。
 
 ```js
 const call = (key, ...args) => context => context[key](...args);
@@ -494,9 +494,9 @@ Promise.resolve([1, 2, 3])
 
 ### collectInto
 
-Changes a function that accepts an array into a variadic function.
+将一个接收数组参数的函数改变为可变参数的函数。
 
-Given a function, return a closure that collects all inputs into an array-accepting function.
+给定一个函数，返回一个闭包，该闭包将所有输入收集到一个数组接受函数中。
 
 ```js
 const collectInto = fn => (...args) => fn(args);
@@ -519,9 +519,10 @@ Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 
 ### flip
 
-Flip takes a function as an argument, then makes the first argument the last.
+Flip以一个函数作为参数，然后把第一个参数作为最后一个参数。
 
-Return a closure that takes variadic inputs, and splices the last argument to make it the first argument before applying the rest.
+返回一个可变参数的闭包，在应用其他参数前，先把第一个以外的其他参数作为第一个参数。
+
 
 ```js
 const flip = fn => (first, ...rest) => fn(...rest, first);

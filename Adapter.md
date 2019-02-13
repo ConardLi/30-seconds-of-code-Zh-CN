@@ -94,9 +94,10 @@ Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 
 ### flip
 
-Flip takes a function as an argument, then makes the first argument the last.
+Flip以一个函数作为参数，然后把第一个参数作为最后一个参数。
 
-Return a closure that takes variadic inputs, and splices the last argument to make it the first argument before applying the rest.
+返回一个可变参数的闭包，在应用其他参数前，先把第一个以外的其他参数作为第一个参数。
+
 
 ```js
 const flip = fn => (first, ...rest) => fn(...rest, first);
