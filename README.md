@@ -5,7 +5,7 @@
 > 你可以在30秒或更短的时间内理解的有用的javascript片段的精选集。
 
 * 使用 <kbd>Ctrl</kbd> + <kbd>F</kbd> or <kbd>command</kbd> + <kbd>F</kbd> 来搜索一个片段.
-
+* 您可以在本页面全览所有代码，也可以点击下面的目录到对应的子界面。
 
 ## 目录
 
@@ -454,7 +454,7 @@ const ary = (fn, n) => (...args) => fn(...args.slice(0, n));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const firstTwoMax = ary(Math.max, 2);
@@ -476,7 +476,7 @@ const call = (key, ...args) => context => context[key](...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 Promise.resolve([1, 2, 3])
@@ -503,7 +503,7 @@ const collectInto = fn => (...args) => fn(args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const Pall = collectInto(Promise.all.bind(Promise));
@@ -528,7 +528,7 @@ const flip = fn => (first, ...rest) => fn(...rest, first);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 let a = { name: 'John Smith' };
@@ -555,7 +555,7 @@ const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const minMax = over(Math.min, Math.max);
@@ -577,7 +577,7 @@ const overArgs = (fn, transforms) => (...args) => fn(...args.map((val, i) => tra
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const square = n => n * n;
@@ -603,7 +603,7 @@ const pipeAsyncFunctions = (...fns) => arg => fns.reduce((p, f) => p.then(f), Pr
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 
@@ -634,7 +634,7 @@ const pipeFunctions = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add5 = x => x + 5;
@@ -664,7 +664,7 @@ const promisify = func => (...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const delay = promisify((d, cb) => setTimeout(cb, d));
@@ -686,7 +686,7 @@ const rearg = (fn, indexes) => (...args) => fn(...indexes.map(i => args[i]));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var rearged = rearg(
@@ -713,7 +713,7 @@ const spreadOver = fn => argsArr => fn(...argsArr);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const arrayMax = spreadOver(Math.max);
@@ -735,7 +735,7 @@ const unary = fn => val => fn(val);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 ['6', '8', '10'].map(unary(parseInt)); // [6, 8, 10]
@@ -762,7 +762,7 @@ const all = (arr, fn = Boolean) => arr.every(fn);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 all([4, 2, 3], x => x > 1); // true
@@ -784,7 +784,7 @@ const allEqual = arr => arr.every(val => val === arr[0]);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 allEqual([1, 2, 3, 4, 5, 6]); // false
@@ -807,7 +807,7 @@ const any = (arr, fn = Boolean) => arr.some(fn);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 any([0, 1, 2, 0], x => x >= 2); // true
@@ -832,7 +832,7 @@ const arrayToCSV = (arr, delimiter = ',') =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 arrayToCSV([['a', 'b'], ['c', 'd']]); // '"a","b"\n"c","d"'
@@ -855,7 +855,7 @@ const bifurcate = (arr, filter) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 bifurcate(['beep', 'boop', 'foo', 'bar'], [true, true, false, true]); // [ ['beep', 'boop', 'bar'], ['foo'] ]
@@ -877,7 +877,7 @@ const bifurcateBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 bifurcateBy(['beep', 'boop', 'foo', 'bar'], x => x[0] === 'b'); // [ ['beep', 'boop', 'bar'], ['foo'] ]
@@ -903,7 +903,7 @@ const chunk = (arr, size) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 chunk([1, 2, 3, 4, 5], 2); // [[1,2],[3,4],[5]]
@@ -924,7 +924,7 @@ const compact = arr => arr.filter(Boolean);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]); // [ 1, 2, 3, 'a', 's', 34 ]
@@ -950,7 +950,7 @@ const countBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 countBy([6.1, 4.2, 6.3], Math.floor); // {4: 1, 6: 2}
@@ -972,7 +972,7 @@ const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 :
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 countOccurrences([1, 1, 2, 1, 2, 3], 1); // 3
@@ -995,7 +995,7 @@ const deepFlatten = arr => [].concat(...arr.map(v => (Array.isArray(v) ? deepFla
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]
@@ -1019,7 +1019,7 @@ const difference = (a, b) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 difference([1, 2, 3], [1, 2, 4]); // [3]
@@ -1043,7 +1043,7 @@ const differenceBy = (a, b, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [1.2]
@@ -1065,7 +1065,7 @@ const differenceWith = (arr, val, comp) => arr.filter(a => val.findIndex(b => co
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Math.round(b)); // [1, 1.2]
@@ -1086,7 +1086,7 @@ const drop = (arr, n = 1) => arr.slice(n);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 drop([1, 2, 3]); // [2,3]
@@ -1109,7 +1109,7 @@ const dropRight = (arr, n = 1) => arr.slice(0, -n);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 dropRight([1, 2, 3]); // [1,2]
@@ -1136,7 +1136,7 @@ const dropRightWhile = (arr, func) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 dropRightWhile([1, 2, 3, 4], n => n < 3); // [1, 2]
@@ -1161,7 +1161,7 @@ const dropWhile = (arr, func) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 dropWhile([1, 2, 3, 4], n => n >= 3); // [3,4]
@@ -1182,7 +1182,7 @@ const everyNth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 everyNth([1, 2, 3, 4, 5, 6], 2); // [ 2, 4, 6 ]
@@ -1203,7 +1203,7 @@ const filterFalsy = arr => arr.filter(Boolean);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true, {}, 'sample', 1]
@@ -1224,7 +1224,7 @@ const filterNonUnique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexO
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 filterNonUnique([1, 2, 2, 3, 4, 4, 5]); // [1, 3, 5]
@@ -1247,7 +1247,7 @@ const filterNonUniqueBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 filterNonUniqueBy(
@@ -1277,7 +1277,7 @@ const findLast = (arr, fn) => arr.filter(fn).pop();
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 findLast([1, 2, 3, 4], n => n % 2 === 1); // 3
@@ -1303,7 +1303,7 @@ const findLastIndex = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 findLastIndex([1, 2, 3, 4], n => n % 2 === 1); // 2 (index of the value 3)
@@ -1328,7 +1328,7 @@ const flatten = (arr, depth = 1) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
@@ -1354,7 +1354,7 @@ const forEachRight = (arr, callback) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 forEachRight([1, 2, 3, 4], val => console.log(val)); // '4', '3', '2', '1'
@@ -1380,7 +1380,7 @@ const groupBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 groupBy([6.1, 4.2, 6.3], Math.floor); // {4: [4.2], 6: [6.1, 6.3]}
@@ -1402,7 +1402,7 @@ const head = arr => arr[0];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 head([1, 2, 3]); // 1
@@ -1425,7 +1425,7 @@ const indexOfAll = (arr, val) => arr.reduce((acc, el, i) => (el === val ? [...ac
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 indexOfAll([1, 2, 3, 1, 2, 3], 1); // [0,3]
@@ -1447,7 +1447,7 @@ const initial = arr => arr.slice(0, -1);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initial([1, 2, 3]); // [1,2]
@@ -1469,7 +1469,7 @@ const initialize2DArray = (w, h, val = null) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initialize2DArray(2, 2, 0); // [[0,0], [0,0]]
@@ -1493,7 +1493,7 @@ const initializeArrayWithRange = (end, start = 0, step = 1) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initializeArrayWithRange(5); // [0,1,2,3,4,5]
@@ -1521,7 +1521,7 @@ const initializeArrayWithRangeRight = (end, start = 0, step = 1) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initializeArrayWithRangeRight(5); // [5,4,3,2,1,0]
@@ -1545,7 +1545,7 @@ const initializeArrayWithValues = (n, val = 0) => Array(n).fill(val);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initializeArrayWithValues(5, 2); // [2, 2, 2, 2, 2]
@@ -1570,7 +1570,7 @@ const initializeNDArray = (val, ...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 initializeNDArray(1, 3); // [1,1,1]
@@ -1595,7 +1595,7 @@ const intersection = (a, b) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
@@ -1619,7 +1619,7 @@ const intersectionBy = (a, b, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [2.1]
@@ -1640,7 +1640,7 @@ const intersectionWith = (a, b, comp) => a.filter(x => b.findIndex(y => comp(x, 
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 intersectionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) === Math.round(b)); // [1.5, 3, 0]
@@ -1670,7 +1670,7 @@ const isSorted = arr => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isSorted([0, 1, 2, 2]); // 1
@@ -1705,7 +1705,7 @@ const join = (arr, separator = ',', end = separator) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 join(['pen', 'pineapple', 'apple', 'pen'], ',', '&'); // "pen,pineapple,apple&pen"
@@ -1740,7 +1740,7 @@ const JSONtoCSV = (arr, columns, delimiter = ',') =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 JSONtoCSV([{ a: 1, b: 2 }, { a: 3, b: 4, c: 5 }, { a: 6 }, { b: 7 }], ['a', 'b']); // 'a,b\n"1","2"\n"3","4"\n"6",""\n"","7"'
@@ -1762,7 +1762,7 @@ const last = arr => arr[arr.length - 1];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 last([1, 2, 3]); // 3
@@ -1785,7 +1785,7 @@ const longestItem = (...vals) => vals.reduce((a, x) => (x.length > a.length ? x 
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 longestItem('this', 'is', 'a', 'testcase'); // 'testcase'
@@ -1813,7 +1813,7 @@ const mapObject = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const squareIt = arr => mapObject(arr, a => a * a);
@@ -1838,7 +1838,7 @@ const maxN = (arr, n = 1) => [...arr].sort((a, b) => b - a).slice(0, n);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 maxN([1, 2, 3]); // [3]
@@ -1863,7 +1863,7 @@ const minN = (arr, n = 1) => [...arr].sort((a, b) => a - b).slice(0, n);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 minN([1, 2, 3]); // [1]
@@ -1886,7 +1886,7 @@ const none = (arr, fn = Boolean) => !arr.some(fn);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 none([0, 1, 3, 0], x => x == 2); // true
@@ -1910,7 +1910,7 @@ const nthElement = (arr, n = 0) => (n === -1 ? arr.slice(n) : arr.slice(n, n + 1
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 nthElement(['a', 'b', 'c'], 1); // 'b'
@@ -1934,7 +1934,7 @@ const offset = (arr, offset) => [...arr.slice(offset), ...arr.slice(0, offset)];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 offset([1, 2, 3, 4, 5], 2); // [3, 4, 5, 1, 2]
@@ -1964,7 +1964,7 @@ const partition = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const users = [{ user: 'barney', age: 36, active: false }, { user: 'fred', age: 40, active: true }];
@@ -2000,7 +2000,7 @@ const permutations = arr => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 permutations([1, 33, 5]); // [ [ 1, 33, 5 ], [ 1, 5, 33 ], [ 33, 1, 5 ], [ 33, 5, 1 ], [ 5, 1, 33 ], [ 5, 33, 1 ] ]
@@ -2029,7 +2029,7 @@ const pull = (arr, ...args) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 let myArray = ['a', 'b', 'c', 'a', 'b', 'c'];
@@ -2061,7 +2061,7 @@ const pullAtIndex = (arr, pullArr) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 let myArray = ['a', 'b', 'c', 'd'];
@@ -2092,7 +2092,7 @@ const pullAtValue = (arr, pullArr) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 let myArray = ['a', 'b', 'c', 'd'];
@@ -2125,7 +2125,7 @@ const pullBy = (arr, ...args) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var myArray = [{ x: 1 }, { x: 2 }, { x: 3 }, { x: 1 }];
@@ -2154,7 +2154,7 @@ const reducedFilter = (data, keys, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const data = [
@@ -2189,7 +2189,7 @@ const reduceSuccessive = (arr, fn, acc) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 reduceSuccessive([1, 2, 3, 4, 5, 6], (acc, val) => acc + val, 0); // [0, 1, 3, 6, 10, 15, 21]
@@ -2212,7 +2212,7 @@ const reduceWhich = (arr, comparator = (a, b) => a - b) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 reduceWhich([1, 3, 2]); // 1
@@ -2236,7 +2236,7 @@ const reject = (pred, array) => array.filter((...args) => !pred(...args));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 reject(x => x % 2 === 0, [1, 2, 3, 4, 5]); // [1, 3, 5]
@@ -2266,7 +2266,7 @@ const remove = (arr, func) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 remove([1, 2, 3, 4], n => n % 2 === 0); // [2, 4]
@@ -2288,7 +2288,7 @@ const sample = arr => arr[Math.floor(Math.random() * arr.length)];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sample([3, 7, 9, 11]); // 9
@@ -2318,7 +2318,7 @@ const sampleSize = ([...arr], n = 1) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sampleSize([1, 2, 3], 2); // [3,1]
@@ -2347,7 +2347,7 @@ const shank = (arr, index = 0, delCount = 0, ...elements) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const names = ['alpha', 'bravo', 'charlie'];
@@ -2378,7 +2378,7 @@ const shuffle = ([...arr]) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const foo = [1, 2, 3];
@@ -2400,7 +2400,7 @@ const similarity = (arr, values) => arr.filter(v => values.includes(v));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 similarity([1, 2, 3], [1, 2, 4]); // [1, 2]
@@ -2426,7 +2426,7 @@ const sortedIndex = (arr, n) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sortedIndex([5, 3, 2, 1], 4); // 1
@@ -2454,7 +2454,7 @@ const sortedIndexBy = (arr, n, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sortedIndexBy([{ x: 4 }, { x: 5 }], { x: 4 }, o => o.x); // 0
@@ -2480,7 +2480,7 @@ const sortedLastIndex = (arr, n) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sortedLastIndex([10, 20, 30, 30, 40], 30); // 4
@@ -2511,7 +2511,7 @@ const sortedLastIndexBy = (arr, n, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sortedLastIndexBy([{ x: 4 }, { x: 5 }], { x: 4 }, o => o.x); // 1
@@ -2539,7 +2539,7 @@ const stableSort = (arr, compare) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -2565,7 +2565,7 @@ const symmetricDifference = (a, b) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 symmetricDifference([1, 2, 3], [1, 2, 4]); // [3, 4]
@@ -2591,7 +2591,7 @@ const symmetricDifferenceBy = (a, b, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 symmetricDifferenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [ 1.2, 3.4 ]
@@ -2615,7 +2615,7 @@ const symmetricDifferenceWith = (arr, val, comp) => [
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 symmetricDifferenceWith(
@@ -2640,7 +2640,7 @@ const tail = arr => (arr.length > 1 ? arr.slice(1) : arr);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 tail([1, 2, 3]); // [2,3]
@@ -2662,7 +2662,7 @@ const take = (arr, n = 1) => arr.slice(0, n);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 take([1, 2, 3], 5); // [1, 2, 3]
@@ -2684,7 +2684,7 @@ const takeRight = (arr, n = 1) => arr.slice(arr.length - n, arr.length);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 takeRight([1, 2, 3], 2); // [ 2, 3 ]
@@ -2707,7 +2707,7 @@ const takeRightWhile = (arr, func) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 takeRightWhile([1, 2, 3, 4], n => n < 3); // [3, 4]
@@ -2732,7 +2732,7 @@ const takeWhile = (arr, func) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 takeWhile([1, 2, 3, 4], n => n >= 3); // [1, 2]
@@ -2758,7 +2758,7 @@ const toHash = (object, key) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 toHash([4, 3, 2, 1]); // { 0: 4, 1: 3, 2: 2, 3: 1 }
@@ -2791,7 +2791,7 @@ const union = (a, b) => Array.from(new Set([...a, ...b]));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 union([1, 2, 3], [4, 3, 2]); // [1,2,3,4]
@@ -2817,7 +2817,7 @@ const unionBy = (a, b, fn) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 unionBy([2.1], [1.2, 2.3], Math.floor); // [2.1, 1.2]
@@ -2839,7 +2839,7 @@ const unionWith = (a, b, comp) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 unionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) === Math.round(b)); // [1, 1.2, 1.5, 3, 0, 3.9]
@@ -2860,7 +2860,7 @@ const uniqueElements = arr => [...new Set(arr)];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 uniqueElements([1, 2, 2, 3, 4, 4, 5]); // [1, 2, 3, 4, 5]
@@ -2886,7 +2886,7 @@ const uniqueElementsBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 uniqueElementsBy(
@@ -2921,7 +2921,7 @@ const uniqueElementsByRight = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 uniqueElementsByRight(
@@ -2953,7 +2953,7 @@ const uniqueSymmetricDifference = (a, b) => [
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 uniqueSymmetricDifference([1, 2, 3], [1, 2, 4]); // [3, 4]
@@ -2982,7 +2982,7 @@ const unzip = arr =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 unzip([['a', 1, true], ['b', 2, false]]); // [['a', 'b'], [1, 2], [true, false]]
@@ -3014,7 +3014,7 @@ const unzipWith = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 unzipWith([[1, 10, 100], [2, 20, 200]], (...args) => args.reduce((acc, v) => acc + v, 0)); // [3, 30, 300]
@@ -3037,7 +3037,7 @@ const without = (arr, ...args) => arr.filter(v => !args.includes(v));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 without([2, 1, 2, 3], 1, 2); // [3]
@@ -3058,7 +3058,7 @@ const xProd = (a, b) => a.reduce((acc, x) => acc.concat(b.map(y => [x, y])), [])
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 xProd([1, 2], ['a', 'b']); // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
@@ -3086,7 +3086,7 @@ const zip = (...arrays) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 zip(['a', 'b'], [1, 2], [true, false]); // [['a', 1, true], ['b', 2, false]]
@@ -3109,7 +3109,7 @@ const zipObject = (props, values) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 zipObject(['a', 'b', 'c'], [1, 2]); // {a: 1, b: 2, c: undefined}
@@ -3141,7 +3141,7 @@ const zipWith = (...array) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 zipWith([1, 2], [10, 20], [100, 200], (a, b, c) => a + b + c); // [111,222]
@@ -3177,7 +3177,7 @@ const arrayToHtmlList = (arr, listID) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 arrayToHtmlList(['item 1', 'item 2'], 'myListID');
@@ -3200,7 +3200,7 @@ const bottomVisible = () =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 bottomVisible(); // true
@@ -3244,7 +3244,7 @@ const copyToClipboard = str => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 copyToClipboard('Lorem ipsum'); // 'Lorem ipsum' copied to clipboard.
@@ -3279,7 +3279,7 @@ const counter = (selector, start, end, step = 1, duration = 2000) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 counter('#my-id', 1, 1000, 5, 2000); // Creates a 2-second timer for the element with id="my-id"
@@ -3307,7 +3307,7 @@ const createElement = str => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const el = createElement(
@@ -3350,7 +3350,7 @@ const createEventHub = () => ({
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const handler = data => console.log(data);
@@ -3386,7 +3386,7 @@ const currentURL = () => window.location.href;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 currentURL(); // 'https://google.com'
@@ -3410,7 +3410,7 @@ const detectDeviceType = () =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 detectDeviceType(); // "Mobile" or "Desktop"
@@ -3431,7 +3431,7 @@ const elementContains = (parent, child) => parent !== child && parent.contains(c
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 elementContains(document.querySelector('head'), document.querySelector('title')); // true
@@ -3463,7 +3463,7 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // e.g. 100x100 viewport and a 10x10px element at position {top: -1, left: 0, bottom: 9, right: 10}
@@ -3489,7 +3489,7 @@ const getImages = (el, includeDuplicates = false) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getImages(document, true); // ['image1.jpg', 'image2.png', 'image1.png', '...']
@@ -3515,7 +3515,7 @@ const getScrollPosition = (el = window) => ({
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getScrollPosition(); // {x: 0, y: 200}
@@ -3536,7 +3536,7 @@ const getStyle = (el, ruleName) => getComputedStyle(el)[ruleName];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getStyle(document.querySelector('p'), 'font-size'); // '16px'
@@ -3557,7 +3557,7 @@ const hasClass = (el, className) => el.classList.contains(className);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 hasClass(document.querySelector('p.special'), 'special'); // true
@@ -3585,7 +3585,7 @@ const hashBrowser = val =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 hashBrowser(JSON.stringify({ a: 'a', b: [1, 2, 3, 4], foo: { c: 'bar' } })).then(console.log); // '04aa106279f5977f59f9067fa9712afc4aedc6f5862a8defc34552d8c7206393'
@@ -3606,7 +3606,7 @@ const hide = (...el) => [...el].forEach(e => (e.style.display = 'none'));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 hide(document.querySelectorAll('img')); // Hides all <img> elements on the page
@@ -3629,7 +3629,7 @@ const httpsRedirect = () => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 httpsRedirect(); // If you are on http://mydomain.com, you are redirected to https://mydomain.com
@@ -3650,7 +3650,7 @@ const insertAfter = (el, htmlString) => el.insertAdjacentHTML('afterend', htmlSt
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 insertAfter(document.getElementById('myId'), '<p>after</p>'); // <div id="myId">...</div> <p>after</p>
@@ -3671,7 +3671,7 @@ const insertBefore = (el, htmlString) => el.insertAdjacentHTML('beforebegin', ht
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 insertBefore(document.getElementById('myId'), '<p>before</p>'); // <p>before</p> <div id="myId">...</div>
@@ -3692,7 +3692,7 @@ const isBrowserTabFocused = () => !document.hidden;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isBrowserTabFocused(); // true
@@ -3713,7 +3713,7 @@ const nodeListToArray = nodeList => [...nodeList];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 nodeListToArray(document.childNodes); // [ <!DOCTYPE html>, html ]
@@ -3753,7 +3753,7 @@ const observeMutations = (element, callback, options) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const obs = observeMutations(document, console.log); // Logs all mutations that happen on the page
@@ -3776,7 +3776,7 @@ const off = (el, evt, fn, opts = false) => el.removeEventListener(evt, fn, opts)
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const fn = () => console.log('!');
@@ -3805,7 +3805,7 @@ const on = (el, evt, fn, opts = {}) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const fn = () => console.log('!');
@@ -3844,7 +3844,7 @@ const onUserInputChange = callback => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 onUserInputChange(type => {
@@ -3875,7 +3875,7 @@ const prefix = prop => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 prefix('appearance'); // 'appearance' on a supported browser, otherwise 'webkitAppearance', 'mozAppearance', 'msAppearance' or 'oAppearance'
@@ -3918,7 +3918,7 @@ const recordAnimationFrames = (callback, autoStart = true) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const cb = () => console.log('Animation frame fired');
@@ -3945,7 +3945,7 @@ const redirect = (url, asLink = true) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 redirect('https://google.com');
@@ -3982,7 +3982,7 @@ const runAsync = fn => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const longRunningFunction = () => {
@@ -4025,7 +4025,7 @@ const scrollToTop = () => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 scrollToTop();
@@ -4046,7 +4046,7 @@ const setStyle = (el, ruleName, val) => (el.style[ruleName] = val);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 setStyle(document.querySelector('p'), 'font-size', '20px'); // The first <p> element on the page will have a font-size of 20px
@@ -4067,7 +4067,7 @@ const show = (...el) => [...el].forEach(e => (e.style.display = ''));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 show(...document.querySelectorAll('img')); // Shows all <img> elements on the page
@@ -4092,7 +4092,7 @@ const smoothScroll = element =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 smoothScroll('#fooBar'); // scrolls smoothly to the element with the id fooBar
@@ -4114,7 +4114,7 @@ const toggleClass = (el, className) => el.classList.toggle(className);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 toggleClass(document.querySelector('p.special'), 'special'); // The paragraph will not have the 'special' class anymore
@@ -4138,7 +4138,7 @@ const triggerEvent = (el, eventType, detail) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 triggerEvent(document.getElementById('myId'), 'click');
@@ -4163,7 +4163,7 @@ const UUIDGeneratorBrowser = () =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 UUIDGeneratorBrowser(); // '7982fcfe-5721-4632-bede-6000885be57d'
@@ -4191,7 +4191,7 @@ const dayOfYear = date =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 dayOfYear(new Date()); // 272
@@ -4228,7 +4228,7 @@ const formatDuration = ms => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 formatDuration(1001); // '1 second, 1 millisecond'
@@ -4250,7 +4250,7 @@ const getColonTimeFromDate = date => date.toTimeString().slice(0, 8);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getColonTimeFromDate(new Date()); // "08:38:00"
@@ -4272,7 +4272,7 @@ const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getDaysDiffBetweenDates(new Date('2017-12-13'), new Date('2017-12-22')); // 9
@@ -4300,7 +4300,7 @@ const getMeridiemSuffixOfInteger = num =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 getMeridiemSuffixOfInteger(0); // "12am"
@@ -4324,7 +4324,7 @@ const isAfterDate = (dateA, dateB) => dateA > dateB;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isAfterDate(new Date(2010, 10, 21), new Date(2010, 10, 20)); // true
@@ -4345,7 +4345,7 @@ const isBeforeDate = (dateA, dateB) => dateA < dateB;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isBeforeDate(new Date(2010, 10, 20), new Date(2010, 10, 21)); // true
@@ -4366,7 +4366,7 @@ const isSameDate = (dateA, dateB) => dateA.toISOString() === dateB.toISOString()
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isSameDate(new Date(2010, 10, 20), new Date(2010, 10, 20)); // true
@@ -4387,7 +4387,7 @@ const maxDate = (...dates) => new Date(Math.max.apply(null, ...dates));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const array = [
@@ -4414,7 +4414,7 @@ const minDate = (...dates) => new Date(Math.min.apply(null, ...dates));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const array = [
@@ -4446,7 +4446,7 @@ const tomorrow = () => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 tomorrow(); // 2018-10-18 (if current date is 2018-10-18)
@@ -4478,7 +4478,7 @@ const attempt = (fn, ...args) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var elements = attempt(function(selector) {
@@ -4503,7 +4503,7 @@ const bind = (fn, context, ...boundArgs) => (...args) => fn.apply(context, [...b
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 function greet(greeting, punctuation) {
@@ -4531,7 +4531,7 @@ const bindKey = (context, fn, ...boundArgs) => (...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const freddy = {
@@ -4567,7 +4567,7 @@ const chainAsync = fns => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 chainAsync([
@@ -4601,7 +4601,7 @@ const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add5 = x => x + 5;
@@ -4629,7 +4629,7 @@ const composeRight = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args))
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add = (x, y) => x + y;
@@ -4654,7 +4654,7 @@ const converge = (converger, fns) => (...args) => converger(...fns.map(fn => fn.
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const average = converge((a, b) => a / b, [
@@ -4683,7 +4683,7 @@ const curry = (fn, arity = fn.length, ...args) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 curry(Math.pow)(2)(10); // 1024
@@ -4712,7 +4712,7 @@ const debounce = (fn, ms = 0) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 window.addEventListener(
@@ -4739,7 +4739,7 @@ const defer = (fn, ...args) => setTimeout(fn, 1, ...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // Example A:
@@ -4767,7 +4767,7 @@ const delay = (fn, wait, ...args) => setTimeout(fn, wait, ...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 delay(
@@ -4794,7 +4794,7 @@ const functionName = fn => (console.debug(fn.name), fn);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 functionName(Math.max); // max (logged in debug channel of console)
@@ -4822,7 +4822,7 @@ const hz = (fn, iterations = 100) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // 10,000 element array
@@ -4867,7 +4867,7 @@ const memoize = fn => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // See the `anagrams` snippet.
@@ -4892,7 +4892,7 @@ const negate = func => (...args) => !func(...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 [1, 2, 3, 4, 5, 6].filter(negate(n => n % 2 === 0)); // [ 1, 3, 5 ]
@@ -4921,7 +4921,7 @@ const once = fn => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const startApp = function(event) {
@@ -4945,7 +4945,7 @@ const partial = (fn, ...partials) => (...args) => fn(...partials, ...args);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const greet = (greeting, name) => greeting + ' ' + name + '!';
@@ -4968,7 +4968,7 @@ const partialRight = (fn, ...partials) => (...args) => fn(...args, ...partials);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const greet = (greeting, name) => greeting + ' ' + name + '!';
@@ -4991,7 +4991,7 @@ const runPromisesInSeries = ps => ps.reduce((p, next) => p.then(next), Promise.r
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const delay = d => new Promise(r => setTimeout(r, d));
@@ -5013,7 +5013,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 async function sleepyWork() {
@@ -5060,7 +5060,7 @@ const throttle = (fn, wait) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 window.addEventListener(
@@ -5091,7 +5091,7 @@ const times = (n, fn, context = undefined) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var output = '';
@@ -5122,7 +5122,7 @@ const uncurry = (fn, n = 1) => (...args) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const add = x => y => z => x + y + z;
@@ -5151,7 +5151,7 @@ const unfold = (fn, seed) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var f = n => (n > 50 ? false : [-n, n + 10]);
@@ -5173,7 +5173,7 @@ const when = (pred, whenTrue) => x => (pred(x) ? whenTrue(x) : x);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const doubleEvenNumbers = when(x => x % 2 === 0, x => x * 2);
@@ -5202,7 +5202,7 @@ const approximatelyEqual = (v1, v2, epsilon = 0.001) => Math.abs(v1 - v2) < epsi
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 approximatelyEqual(Math.PI / 2.0, 1.5708); // true
@@ -5223,7 +5223,7 @@ const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.leng
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 average(...[1, 2, 3]); // 2
@@ -5247,7 +5247,7 @@ const averageBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 averageBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], o => o.n); // 5
@@ -5282,7 +5282,7 @@ const binomialCoefficient = (n, k) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 binomialCoefficient(8, 2); // 28
@@ -5304,7 +5304,7 @@ const clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 clampNumber(2, 3, 5); // 3
@@ -5326,7 +5326,7 @@ const degreesToRads = deg => (deg * Math.PI) / 180.0;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 degreesToRads(90.0); // ~1.5708
@@ -5348,7 +5348,7 @@ const digitize = n => [...`${n}`].map(i => parseInt(i));
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 digitize(123); // [1, 2, 3]
@@ -5369,7 +5369,7 @@ const distance = (x0, y0, x1, y1) => Math.hypot(x1 - x0, y1 - y0);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 distance(1, 1, 2, 3); // 2.23606797749979
@@ -5410,7 +5410,7 @@ const elo = ([...ratings], kFactor = 32, selfRating) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // Standard 1v1s
@@ -5451,7 +5451,7 @@ const factorial = n =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 factorial(6); // 720
@@ -5477,7 +5477,7 @@ const fibonacci = n =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 fibonacci(6); // [0, 1, 1, 2, 3, 5]
@@ -5503,7 +5503,7 @@ const gcd = (...arr) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 gcd(8, 36); // 4
@@ -5531,7 +5531,7 @@ const geometricProgression = (end, start = 1, step = 2) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 geometricProgression(256); // [1, 2, 4, 8, 16, 32, 64, 128, 256]
@@ -5555,7 +5555,7 @@ const hammingDistance = (num1, num2) => ((num1 ^ num2).toString(2).match(/1/g) |
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 hammingDistance(2, 3); // 1
@@ -5580,7 +5580,7 @@ const inRange = (n, start, end = null) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 inRange(3, 2, 5); // true
@@ -5604,7 +5604,7 @@ const isDivisible = (dividend, divisor) => dividend % divisor === 0;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isDivisible(6, 3); // true
@@ -5626,7 +5626,7 @@ const isEven = num => num % 2 === 0;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isEven(3); // false
@@ -5647,7 +5647,7 @@ const isNegativeZero = val => val === 0 && 1 / val === -Infinity;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isNegativeZero(-0); // true
@@ -5674,7 +5674,7 @@ const isPrime = num => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isPrime(11); // true
@@ -5700,7 +5700,7 @@ const lcm = (...arr) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 lcm(12, 7); // 84
@@ -5735,7 +5735,7 @@ const luhnCheck = num => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 luhnCheck('4485275742308327'); // true
@@ -5758,7 +5758,7 @@ const maxBy = (arr, fn) => Math.max(...arr.map(typeof fn === 'function' ? fn : v
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 maxBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], o => o.n); // 8
@@ -5785,7 +5785,7 @@ const median = arr => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 median([5, 6, 50, 1, -5]); // 5
@@ -5806,7 +5806,7 @@ const midpoint = ([x1, y1], [x2, y2]) => [(x1 + x2) / 2, (y1 + y2) / 2];
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 midpoint([2, 2], [4, 4]); // [3, 3]
@@ -5830,7 +5830,7 @@ const minBy = (arr, fn) => Math.min(...arr.map(typeof fn === 'function' ? fn : v
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 minBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], o => o.n); // 2
@@ -5853,7 +5853,7 @@ const percentile = (arr, val) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6); // 55
@@ -5874,7 +5874,7 @@ const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r)))
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 powerset([1, 2]); // [[], [1], [2], [2, 1]]
@@ -5901,7 +5901,7 @@ const primes = num => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 primes(10); // [2,3,5,7]
@@ -5922,7 +5922,7 @@ const radsToDegrees = rad => (rad * 180.0) / Math.PI;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 radsToDegrees(Math.PI / 2); // 90
@@ -5944,7 +5944,7 @@ const randomIntArrayInRange = (min, max, n = 1) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 randomIntArrayInRange(12, 35, 10); // [ 34, 14, 27, 17, 30, 27, 20, 26, 21, 14 ]
@@ -5965,7 +5965,7 @@ const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 randomIntegerInRange(0, 5); // 2
@@ -5986,7 +5986,7 @@ const randomNumberInRange = (min, max) => Math.random() * (max - min) + min;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 randomNumberInRange(2, 10); // 6.0211363285087005
@@ -6008,7 +6008,7 @@ const round = (n, decimals = 0) => Number(`${Math.round(`${n}e${decimals}`)}e-${
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 round(1.005, 2); // 1.01
@@ -6036,7 +6036,7 @@ const sdbm = str => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sdbm('name'); // -3521204949
@@ -6065,7 +6065,7 @@ const standardDeviation = (arr, usePopulation = false) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 standardDeviation([10, 2, 38, 23, 38, 23, 21]); // 13.284434142114991 (sample)
@@ -6087,7 +6087,7 @@ const sum = (...arr) => [...arr].reduce((acc, val) => acc + val, 0);
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sum(1, 2, 3, 4); // 10
@@ -6110,7 +6110,7 @@ const sumBy = (arr, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sumBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], o => o.n); // 20
@@ -6138,7 +6138,7 @@ const sumPower = (end, power = 2, start = 1) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 sumPower(10); // 385
@@ -6163,7 +6163,7 @@ const toSafeInteger = num =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 toSafeInteger('3.2'); // 3
@@ -6190,7 +6190,7 @@ const atob = str => Buffer.from(str, 'base64').toString('binary');
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 atob('Zm9vYmFy'); // 'foobar'
@@ -6211,7 +6211,7 @@ const btoa = str => Buffer.from(str, 'binary').toString('base64');
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 btoa('foobar'); // 'Zm9vYmFy'
@@ -6250,7 +6250,7 @@ const colorize = (...args) => ({
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 console.log(colorize('foo').red); // 'foo' (red letters)
@@ -6274,7 +6274,7 @@ const createDirIfNotExists = dir => (!fs.existsSync(dir) ? fs.mkdirSync(dir) : u
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 createDirIfNotExists('test'); // creates the directory 'test', if it doesn't exist
@@ -6297,7 +6297,7 @@ const hasFlags = (...flags) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 // node myScript.js -s --test --cool=true
@@ -6334,7 +6334,7 @@ const hashNode = val =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 hashNode(JSON.stringify({ a: 'a', b: [1, 2, 3, 4], foo: { c: 'bar' } })).then(console.log); // '04aa106279f5977f59f9067fa9712afc4aedc6f5862a8defc34552d8c7206393'
@@ -6363,7 +6363,7 @@ const isDuplexStream = val =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const Stream = require('stream');
@@ -6391,7 +6391,7 @@ const isReadableStream = val =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const fs = require('fs');
@@ -6413,7 +6413,7 @@ const isStream = val => val !== null && typeof val === 'object' && typeof val.pi
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const fs = require('fs');
@@ -6435,7 +6435,7 @@ const isTravisCI = () => 'TRAVIS' in process.env && 'CI' in process.env;
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 isTravisCI(); // true (if code is running on Travis CI)
@@ -6462,7 +6462,7 @@ const isWritableStream = val =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const fs = require('fs');
@@ -6486,7 +6486,7 @@ const JSONToFile = (obj, filename) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 JSONToFile({ test: 'is passed' }, 'testJsonFile'); // writes the object to 'testJsonFile.json'
@@ -6514,7 +6514,7 @@ const readFileLines = filename =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 /*
@@ -6544,7 +6544,7 @@ const untildify = str => str.replace(/^~($|\/|\\)/, `${require('os').homedir()}$
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 untildify('~/node'); // '/Users/aUser/node'
@@ -6569,7 +6569,7 @@ const UUIDGeneratorNode = () =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 UUIDGeneratorNode(); // '79c7c136-60ee-40a2-beb2-856f1feabefc'
@@ -6603,7 +6603,7 @@ const bindAll = (obj, ...fns) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 var view = {
@@ -6643,7 +6643,7 @@ const deepClone = obj => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const a = { foo: 'bar', obj: { a: 1, b: 2 } };
@@ -6669,7 +6669,7 @@ const deepFreeze = obj =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 'use strict';
@@ -6709,7 +6709,7 @@ const deepMapKeys = (obj, f) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const obj = {
@@ -6756,7 +6756,7 @@ const defaults = (obj, ...defs) => Object.assign({}, obj, ...defs.reverse(), obj
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 defaults({ a: 1 }, { b: 2 }, { b: 6 }, { a: 3 }); // { a: 1, b: 2 }
@@ -6785,7 +6785,7 @@ const dig = (obj, target) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 const data = {
@@ -6825,7 +6825,7 @@ const equals = (a, b) => {
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 equals({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'foo' }); // true
@@ -6846,7 +6846,7 @@ const findKey = (obj, fn) => Object.keys(obj).find(key => fn(obj[key], key, obj)
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 findKey(
@@ -6879,7 +6879,7 @@ const findLastKey = (obj, fn) =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 findLastKey(
@@ -6917,7 +6917,7 @@ const flattenObject = (obj, prefix = '') =>
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 flattenObject({ a: { b: { c: 1 } }, d: 1 }); // { 'a.b.c': 1, d: 1 }
@@ -6938,7 +6938,7 @@ const forOwn = (obj, fn) => Object.keys(obj).forEach(key => fn(obj[key], key, ob
 ```
 
 <details>
-<summary>Examples</summary>
+<summary>示例</summary>
 
 ```js
 forOwn({ foo: '
