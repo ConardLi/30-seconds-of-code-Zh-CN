@@ -122,9 +122,9 @@ Object.assign(b, a); // == b
 
 ### over
 
-Creates a function that invokes each provided function with the arguments it receives and returns the results.
+创建一个函数，这个函数可以调用每一个被传入的并且才有参数的函数，然后返回结果。
 
-Use `Array.prototype.map()` and `Function.prototype.apply()` to apply each function to the given arguments.
+使用 `Array.prototype.map()` 和 `Function.prototype.apply()`将每个函数应用给定的参数。
 
 ```js
 const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
