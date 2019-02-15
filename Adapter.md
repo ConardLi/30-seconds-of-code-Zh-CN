@@ -144,9 +144,9 @@ minMax(1, 2, 3, 4, 5); // [1,5]
 
 ### overArgs
 
-Creates a function that invokes the provided function with its arguments transformed.
+创建一个函数，它可以调用提供的被转换参数的函数。
 
-Use `Array.prototype.map()` to apply `transforms` to `args` in combination with the spread operator (`...`) to pass the transformed arguments to `fn`.
+使用`Array.prototype.map()`将`transforms`应用于`args`，并结合扩展运算符(`…`)将转换后的参数传递给`fn`。
 
 ```js
 const overArgs = (fn, transforms) => (...args) => fn(...args.map((val, i) => transforms[i](val)));
