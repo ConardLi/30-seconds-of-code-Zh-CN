@@ -651,12 +651,10 @@ multiplyAndAdd5(5, 2); // 15
 
 ### promisify
 
-Converts an asynchronous function to return a promise.
+把一个异步函数转换成返回promise的。
 
-Use currying to return a function returning a `Promise` that calls the original function.
-Use the `...rest` operator to pass in all the parameters.
-
-*In Node 8+, you can use [`util.promisify`](https://nodejs.org/api/util.html#util_util_promisify_original)*
+使用局部套用返回一个函数，该函数返回一个调用原始函数的`Promise`。
+使用的`...`操作符来传入所有参数。
 
 ```js
 const promisify = func => (...args) =>
