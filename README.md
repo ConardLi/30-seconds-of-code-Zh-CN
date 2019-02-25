@@ -677,9 +677,9 @@ delay(2000).then(() => console.log('Hi!')); // // Promise resolves after 2s
 
 ### rearg
 
-Creates a function that invokes the provided function with its arguments arranged according to the specified indexes.
+创建一个调用提供的函数的函数，该函数的参数按照指定的索引排列。
 
-Use `Array.prototype.map()` to reorder arguments based on `indexes` in combination with the spread operator (`...`) to pass the transformed arguments to `fn`.
+利用 `Array.prototype.map()` 根据 `indexes` 和展开操作符 (`...`) 对参数进行重新排序，将转换后的参数传递给 `fn`。
 
 ```js
 const rearg = (fn, indexes) => (...args) => fn(...indexes.map(i => args[i]));
