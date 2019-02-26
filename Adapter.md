@@ -65,8 +65,6 @@ Promise.resolve([1, 2, 3])
 
 
 
-
-
 ### collectInto
 
 将一个接收数组参数的函数改变为可变参数的函数。
@@ -194,9 +192,6 @@ const sum = pipeAsyncFunctions(
 ```
 
 
-
-
-
 ### pipeFunctions
 
 执行从左到右的函数组合。
@@ -217,9 +212,6 @@ const multiply = (x, y) => x * y;
 const multiplyAndAdd5 = pipeFunctions(multiply, add5);
 multiplyAndAdd5(5, 2); // 15
 ```
-
-
-
 
 
 ### promisify
@@ -275,13 +267,11 @@ rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 
 
 
-
-
 ### spreadOver
 
-Takes a variadic function and returns a closure that accepts an array of arguments to map to the inputs of the function.
+接受一个可变参数函数并返回一个闭包，该闭包接受一个参数数组以映射到函数的输入。
 
-Use closures and the spread operator (`...`) to map the array of arguments to the inputs of the function.
+使用闭包和扩展操作符(`…`)将参数数组映射到函数的输入。
 
 ```js
 const spreadOver = fn => argsArr => fn(...argsArr);
@@ -295,30 +285,20 @@ const arrayMax = spreadOver(Math.max);
 arrayMax([1, 2, 3]); // 3
 ```
 
-
-
-
-
 ### unary
 
-Creates a function that accepts up to one argument, ignoring any additional arguments.
+创建一个最多接受一个参数的函数，忽略任何其他参数。
 
-Call the provided function, `fn`, with just the first argument given.
+只把第一个参数传递给要调用的函数`fn`。
 
 ```js
 const unary = fn => val => fn(val);
 ```
-
 
 示例
 
 ```js
 ['6', '8', '10'].map(unary(parseInt)); // [6, 8, 10]
 ```
-
-
-
-
-
 
 ---

@@ -704,9 +704,9 @@ rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 
 ### spreadOver
 
-Takes a variadic function and returns a closure that accepts an array of arguments to map to the inputs of the function.
+接受一个可变参数函数并返回一个闭包，该闭包接受一个参数数组以映射到函数的输入。
 
-Use closures and the spread operator (`...`) to map the array of arguments to the inputs of the function.
+使用闭包和扩展操作符(`…`)将参数数组映射到函数的输入。
 
 ```js
 const spreadOver = fn => argsArr => fn(...argsArr);
@@ -726,9 +726,9 @@ arrayMax([1, 2, 3]); // 3
 
 ### unary
 
-Creates a function that accepts up to one argument, ignoring any additional arguments.
+创建一个最多接受一个参数的函数，忽略任何其他参数。
 
-Call the provided function, `fn`, with just the first argument given.
+只把第一个参数传递给要调用的函数`fn`。
 
 ```js
 const unary = fn => val => fn(val);
