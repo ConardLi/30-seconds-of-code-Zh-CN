@@ -28,17 +28,17 @@
 const ary = (fn, n) => (...args) => fn(...args.slice(0, n));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const firstTwoMax = ary(Math.max, 2);
 [[2, 6, 'a'], [8, 4, 6], [10]].map(x => firstTwoMax(...x)); // [6, 8, 10]
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### call
 
@@ -50,8 +50,8 @@ const firstTwoMax = ary(Math.max, 2);
 const call = (key, ...args) => context => context[key](...args);
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 Promise.resolve([1, 2, 3])
@@ -63,9 +63,9 @@ Promise.resolve([1, 2, 3])
   .then(console.log); // [ 2, 4, 6 ]
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### collectInto
 
@@ -77,8 +77,8 @@ Promise.resolve([1, 2, 3])
 const collectInto = fn => (...args) => fn(args);
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const Pall = collectInto(Promise.all.bind(Promise));
@@ -88,9 +88,9 @@ let p3 = new Promise(resolve => setTimeout(resolve, 2000, 3));
 Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### flip
 
@@ -103,8 +103,8 @@ Pall(p1, p2, p3).then(console.log); // [1, 2, 3] (after about 2 seconds)
 const flip = fn => (first, ...rest) => fn(...rest, first);
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 let a = { name: 'John Smith' };
@@ -116,9 +116,9 @@ b = {};
 Object.assign(b, a); // == b
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### over
 
@@ -130,17 +130,17 @@ Object.assign(b, a); // == b
 const over = (...fns) => (...args) => fns.map(fn => fn.apply(null, args));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const minMax = over(Math.min, Math.max);
 minMax(1, 2, 3, 4, 5); // [1,5]
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### overArgs
 
@@ -152,8 +152,8 @@ minMax(1, 2, 3, 4, 5); // [1,5]
 const overArgs = (fn, transforms) => (...args) => fn(...args.map((val, i) => transforms[i](val)));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const square = n => n * n;
@@ -162,9 +162,9 @@ const fn = overArgs((x, y) => [x, y], [square, double]);
 fn(9, 3); // [81, 6]
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### pipeAsyncFunctions
 
@@ -177,8 +177,8 @@ fn(9, 3); // [81, 6]
 const pipeAsyncFunctions = (...fns) => arg => fns.reduce((p, f) => p.then(f), Promise.resolve(arg));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 
@@ -193,9 +193,9 @@ const sum = pipeAsyncFunctions(
 })();
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### pipeFunctions
 
@@ -208,8 +208,8 @@ const sum = pipeAsyncFunctions(
 const pipeFunctions = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const add5 = x => x + 5;
@@ -218,9 +218,9 @@ const multiplyAndAdd5 = pipeFunctions(multiply, add5);
 multiplyAndAdd5(5, 2); // 15
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### promisify
 
@@ -237,17 +237,17 @@ const promisify = func => (...args) =>
   );
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const delay = promisify((d, cb) => setTimeout(cb, d));
 delay(2000).then(() => console.log('Hi!')); // Promise resolves after 2s
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### rearg
 
@@ -260,8 +260,8 @@ delay(2000).then(() => console.log('Hi!')); // Promise resolves after 2s
 const rearg = (fn, indexes) => (...args) => fn(...indexes.map(i => args[i]));
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 var rearged = rearg(
@@ -273,9 +273,9 @@ var rearged = rearg(
 rearged('b', 'c', 'a'); // ['a', 'b', 'c']
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### spreadOver
 
@@ -287,17 +287,17 @@ Use closures and the spread operator (`...`) to map the array of arguments to th
 const spreadOver = fn => argsArr => fn(...argsArr);
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 const arrayMax = spreadOver(Math.max);
 arrayMax([1, 2, 3]); // 3
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 ### unary
 
@@ -309,16 +309,16 @@ Call the provided function, `fn`, with just the first argument given.
 const unary = fn => val => fn(val);
 ```
 
-<details>
-<summary>示例</summary>
+
+示例
 
 ```js
 ['6', '8', '10'].map(unary(parseInt)); // [6, 8, 10]
 ```
 
-</details>
 
-<br>[⬆ 回到顶部](#目录)
+
+
 
 
 ---
