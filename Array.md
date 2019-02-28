@@ -99,21 +99,18 @@
 
 
 
-
-
 ## 📚 Array
 
 ### all
 
-Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.
+如果被提供的断言函数接收数组中每个元素作为参数都返回`true`，则返回`true`，否则返回`false`。
 
-Use `Array.prototype.every()` to test if all elements in the collection return `true` based on `fn`.
-Omit the second argument, `fn`, to use `Boolean` as a default.
+
+使用 `Array.prototype.every()`来测试是否第二个参数`fn`以集合中每个元素作为参数都返回`true`，使用`Boolean`作为默认值。
 
 ```js
 const all = (arr, fn = Boolean) => arr.every(fn);
 ```
-
 
 示例
 
@@ -121,9 +118,6 @@ const all = (arr, fn = Boolean) => arr.every(fn);
 all([4, 2, 3], x => x > 1); // true
 all([1, 2, 3]); // true
 ```
-
-
-
 
 
 ### allEqual
@@ -143,9 +137,6 @@ const allEqual = arr => arr.every(val => val === arr[0]);
 allEqual([1, 2, 3, 4, 5, 6]); // false
 allEqual([1, 1, 1, 1]); // true
 ```
-
-
-
 
 
 ### any
