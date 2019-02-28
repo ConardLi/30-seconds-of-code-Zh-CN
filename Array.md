@@ -103,7 +103,7 @@
 
 ### all
 
-如果被提供的断言函数接收数组中每个元素作为参数都返回`true`，则返回`true`，否则返回`false`。
+如果被提供的断言函数接收数组中每个元素作为参数都返回`true`，则返回`true`，否则返回`false`。
 
 
 使用 `Array.prototype.every()`来测试是否第二个参数`fn`以集合中每个元素作为参数都返回`true`，使用`Boolean`作为默认值。
@@ -122,9 +122,9 @@ all([1, 2, 3]); // true
 
 ### allEqual
 
-Check if all elements in an array are equal.
+检查是否数组中所有的元素都是相等的。
 
-Use `Array.prototype.every()` to check if all the elements of the array are the same as the first one.
+使用 `Array.prototype.every()` 来检测是否数组中的所有元素都和第一个元素相等。
 
 ```js
 const allEqual = arr => arr.every(val => val === arr[0]);

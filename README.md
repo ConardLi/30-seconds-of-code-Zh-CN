@@ -775,9 +775,9 @@ all([1, 2, 3]); // true
 
 ### allEqual
 
-Check if all elements in an array are equal.
+检查是否数组中所有的元素都是相等的。
 
-Use `Array.prototype.every()` to check if all the elements of the array are the same as the first one.
+使用 `Array.prototype.every()` 来检测是否数组中的所有元素都和第一个元素相等。
 
 ```js
 const allEqual = arr => arr.every(val => val === arr[0]);
