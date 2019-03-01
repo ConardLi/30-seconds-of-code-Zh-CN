@@ -797,10 +797,9 @@ allEqual([1, 1, 1, 1]); // true
 
 ### any
 
-Returns `true` if the provided predicate function returns `true` for at least one element in a collection, `false` otherwise.
+如果被提供的断言函数接收数组中任意一个元素作为参数都返回`true`，则返回`true`，否则返回`false`。
 
-Use `Array.prototype.some()` to test if any elements in the collection return `true` based on `fn`.
-Omit the second argument, `fn`, to use `Boolean` as a default.
+使用 `Array.prototype.every()`来测试是否第二个参数`fn`以集合中任意一个元素作为参数都返回`true`，使用`Boolean`作为默认值。
 
 ```js
 const any = (arr, fn = Boolean) => arr.some(fn);
@@ -820,11 +819,13 @@ any([0, 0, 1, 0]); // true
 
 ### arrayToCSV
 
-Converts a 2D array to a comma-separated values (CSV) string.
+将2D数组转换为逗号分隔值(CSV)字符串。
 
-Use `Array.prototype.map()` and `Array.prototype.join(delimiter)` to combine individual 1D arrays (rows) into strings.
-Use `Array.prototype.join('\n')` to combine all rows into a CSV string, separating each row with a newline.
-Omit the second argument, `delimiter`, to use a default delimiter of `,`.
+使用 `Array.prototype.map()` 和 `Array.prototype.join(delimiter)` 将一个一维数组转换为字符串。
+
+使用 `Array.prototype.join('\n')` 将所有行合并成CSV字符串, 用换行符分割每一行。
+
+如果没有第二哥参数, `delimiter`会使用一个默认分隔符 `,`.
 
 ```js
 const arrayToCSV = (arr, delimiter = ',') =>
