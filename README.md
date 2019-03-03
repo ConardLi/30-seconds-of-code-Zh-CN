@@ -846,9 +846,9 @@ arrayToCSV([['a', 'b'], ['c', 'd']], ';'); // '"a";"b"\n"c";"d"'
 
 ### bifurcate
 
-Splits values into two groups. If an element in `filter` is truthy, the corresponding element in the collection belongs to the first group; otherwise, it belongs to the second group.
+将数据分为两组，如果元素在 `filter`数组中对应的是`true`，集合中相应的元素应加入第一个数组，否则加入第二个数组。
 
-Use `Array.prototype.reduce()` and `Array.prototype.push()` to add elements to groups, based on `filter`.
+基于`filter`使用`Array.prototype.reduce()` 和 `Array.prototype.push()`将元素分组。
 
 ```js
 const bifurcate = (arr, filter) =>
