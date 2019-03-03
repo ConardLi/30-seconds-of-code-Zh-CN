@@ -183,9 +183,6 @@ arrayToCSV([['a', 'b'], ['c', 'd']], ';'); // '"a";"b"\n"c";"d"'
 ```
 
 
-
-
-
 ### bifurcate
 
 将数据分为两组，如果元素在 `filter`数组中对应的是`true`，集合中相应的元素应加入第一个数组，否则加入第二个数组。
@@ -204,16 +201,11 @@ const bifurcate = (arr, filter) =>
 bifurcate(['beep', 'boop', 'foo', 'bar'], [true, true, false, true]); // [ ['beep', 'boop', 'bar'], ['foo'] ]
 ```
 
-
-
-
-
 ### bifurcateBy
 
-Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. If the predicate function returns a truthy value, the collection element belongs to the first group; otherwise, it belongs to the second group.
+根据断言函数将数据分成两组，断言函数将指定集合中的元素属于哪个组。如果断言函数返回`true`，元素加入第一个数组，否则加入第二个数组。
 
-Use `Array.prototype.reduce()` and `Array.prototype.push()` to add elements to groups, based on the value returned by `fn` for each element.
-
+给予`fn`接收元素的返回值，使用`Array.prototype.reduce()` 和 `Array.prototype.push()`将元素分组。
 ```js
 const bifurcateBy = (arr, fn) =>
   arr.reduce((acc, val, i) => (acc[fn(val, i) ? 0 : 1].push(val), acc), [[], []]);
@@ -225,9 +217,6 @@ const bifurcateBy = (arr, fn) =>
 ```js
 bifurcateBy(['beep', 'boop', 'foo', 'bar'], x => x[0] === 'b'); // [ ['beep', 'boop', 'bar'], ['foo'] ]
 ```
-
-
-
 
 
 ### chunk
