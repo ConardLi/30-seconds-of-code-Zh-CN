@@ -221,11 +221,11 @@ bifurcateBy(['beep', 'boop', 'foo', 'bar'], x => x[0] === 'b'); // [ ['beep', 'b
 
 ### chunk
 
-Chunks an array into smaller arrays of a specified size.
+将数组分成指定大小的较小数组。
 
-Use `Array.from()` to create a new array, that fits the number of chunks that will be produced.
-Use `Array.prototype.slice()` to map each element of the new array to a chunk the length of `size`.
-If the original array can't be split evenly, the final chunk will contain the remaining elements.
+使用 `Array.from()`创建一个新的数组，该数组与将要生成的块的数量相匹配。
+使用 `Array.prototype.slice()` 将新数组的每个元素映射到长度为`size`的块。
+如果原始的数组不能被均匀的分割，最后的一块将包含剩余的元素。
 
 ```js
 const chunk = (arr, size) =>
@@ -240,8 +240,6 @@ const chunk = (arr, size) =>
 ```js
 chunk([1, 2, 3, 4, 5], 2); // [[1,2],[3,4],[5]]
 ```
-
-
 
 
 
