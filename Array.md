@@ -242,17 +242,15 @@ chunk([1, 2, 3, 4, 5], 2); // [[1,2],[3,4],[5]]
 ```
 
 
-
 ### compact
 
-Removes falsey values from an array.
+删除数组中错误的元素
 
-Use `Array.prototype.filter()` to filter out falsey values (`false`, `null`, `0`, `""`, `undefined`, and `NaN`).
+使用 `Array.prototype.filter()` 过滤掉错误的元素 (`false`, `null`, `0`, `""`, `undefined`,  `NaN`).
 
 ```js
 const compact = arr => arr.filter(Boolean);
 ```
-
 
 示例
 
@@ -260,16 +258,12 @@ const compact = arr => arr.filter(Boolean);
 compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]); // [ 1, 2, 3, 'a', 's', 34 ]
 ```
 
-
-
-
-
 ### countBy
 
-Groups the elements of an array based on the given function and returns the count of elements in each group.
+基于给定的函数将数组中的元素进行分组，并返回每个组中的元素数。
 
-Use `Array.prototype.map()` to map the values of an array to a function or property name.
-Use `Array.prototype.reduce()` to create an object, where the keys are produced from the mapped results.
+使用`Array.prototype.map()`来将数组中的每个元素映射到函数或属性名。
+使用 `Array.prototype.reduce()` 创建一个对象，其中的键是从映射结果生成的。
 
 ```js
 const countBy = (arr, fn) =>
@@ -286,9 +280,6 @@ const countBy = (arr, fn) =>
 countBy([6.1, 4.2, 6.3], Math.floor); // {4: 1, 6: 2}
 countBy(['one', 'two', 'three'], 'length'); // {3: 2, 5: 1}
 ```
-
-
-
 
 
 ### countOccurrences
