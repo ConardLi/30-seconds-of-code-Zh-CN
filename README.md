@@ -966,10 +966,9 @@ countBy(['one', 'two', 'three'], 'length'); // {3: 2, 5: 1}
 
 ### countOccurrences
 
-Counts the occurrences of a value in an array.
+计算数组中某个元素出现的次数。
 
-Use `Array.prototype.reduce()` to increment a counter each time you encounter the specific value inside the array.
-
+Use `Array.prototype.reduce()`在每次遇到数组中的特定值时递增计数器。
 ```js
 const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 ```
@@ -987,11 +986,12 @@ countOccurrences([1, 1, 2, 1, 2, 3], 1); // 3
 
 ### deepFlatten
 
-Deep flattens an array.
+将一个多层嵌套的数组转转换成一个一元数组。
 
-Use recursion.
+使用递归.
 Use `Array.prototype.concat()` with an empty array (`[]`) and the spread operator (`...`) to flatten an array.
-Recursively flatten each element that is an array.
+使用 `Array.prototype.concat()` 和一个空数组(`[]`)以及展开运算符(`...`)来平铺一个数组。
+当每个元素还是一个数字时，递归铺平他。
 
 ```js
 const deepFlatten = arr => [].concat(...arr.map(v => (Array.isArray(v) ? deepFlatten(v) : v)));
