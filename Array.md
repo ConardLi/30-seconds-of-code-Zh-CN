@@ -319,15 +319,11 @@ const deepFlatten = arr => [].concat(...arr.map(v => (Array.isArray(v) ? deepFla
 deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]
 ```
 
-
-
-
-
 ### difference
 
-Returns the difference between two arrays.
+返回两个数组间的差异值。
 
-Create a `Set` from `b`, then use `Array.prototype.filter()` on `a` to only keep values not contained in `b`.
+从数组`b`中创建一个 `Set` ，然后用使用另一个数组`a`的`Array.prototype.filter()` 方法过滤掉`b`中的元素。
 
 ```js
 const difference = (a, b) => {
@@ -336,15 +332,11 @@ const difference = (a, b) => {
 };
 ```
 
-
 示例
 
 ```js
 difference([1, 2, 3], [1, 2, 4]); // [3]
 ```
-
-
-
 
 
 ### differenceBy
@@ -360,16 +352,12 @@ const differenceBy = (a, b, fn) => {
 };
 ```
 
-
 示例
 
 ```js
 differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [1.2]
 differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], v => v.x); // [ { x: 2 } ]
 ```
-
-
-
 
 
 ### differenceWith

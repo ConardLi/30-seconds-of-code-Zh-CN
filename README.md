@@ -1010,9 +1010,9 @@ deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]
 
 ### difference
 
-Returns the difference between two arrays.
+返回两个数组间的差异值。
 
-Create a `Set` from `b`, then use `Array.prototype.filter()` on `a` to only keep values not contained in `b`.
+从数组`b`中创建一个 `Set` ，然后用使用另一个数组`a`的`Array.prototype.filter()` 方法过滤掉`b`中的元素。
 
 ```js
 const difference = (a, b) => {
