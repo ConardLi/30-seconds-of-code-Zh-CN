@@ -341,9 +341,9 @@ difference([1, 2, 3], [1, 2, 4]); // [3]
 
 ### differenceBy
 
-Returns the difference between two arrays, after applying the provided function to each array element of both.
+将提供的函数应用于两个数组的每个数组元素后，返回两个数组中不同的元素。
 
-Create a `Set` by applying `fn` to each element in `b`, then use `Array.prototype.filter()` in combination with `fn` on `a` to only keep values not contained in the previously created set.
+通过`b`中的每个元素调用 `fn`后创建一个 `Set` ，然后将`Array.prototype.filter()` 与`fn`调用后的`a`结合使用，只保留先前创建的集合中不包含的值。
 
 ```js
 const differenceBy = (a, b, fn) => {
