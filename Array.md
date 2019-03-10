@@ -362,9 +362,10 @@ differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], v => v.x); // [ { x: 2 } ]
 
 ### differenceWith
 
-Filters out all values from an array for which the comparator function does not return `true`.
 
-Use `Array.prototype.filter()` and `Array.prototype.findIndex()` to find the appropriate values.
+筛选出比较器函数不返回`true`的数组中的所有值。
+
+使用 `Array.prototype.filter()` 和 `Array.prototype.findIndex()` 查找合适的值。
 
 ```js
 const differenceWith = (arr, val, comp) => arr.filter(a => val.findIndex(b => comp(a, b)) === -1);
