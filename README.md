@@ -1081,9 +1081,9 @@ differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Mat
 
 ### drop
 
-Returns a new array with `n` elements removed from the left.
+返回一个新数组，删除下标 `n` 左侧的元素。
 
-Use `Array.prototype.slice()` to slice the remove the specified number of elements from the left.
+使用 `Array.prototype.slice()` 将指定数量的元素从左侧删除。
 
 ```js
 const drop = (arr, n = 1) => arr.slice(n);
