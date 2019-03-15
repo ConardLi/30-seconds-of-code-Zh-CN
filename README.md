@@ -1132,10 +1132,9 @@ dropRight([1, 2, 3], 42); // []
 
 ### dropRightWhile
 
-Removes elements from the end of an array until the passed function returns `true`. Returns the remaining elements in the array.
+移除数组中的元素，直到传递的函数返回`true`。返回数组中剩余的元素。
 
-Loop through the array, using `Array.prototype.slice()` to drop the last element of the array until the returned value from the function is `true`.
-Returns the remaining elements.
+遍历数组，使用`Array.prototype.slice()`删除数组的第一个元素，直到函数的返回值为`true`。返回剩余的元素。
 
 ```js
 const dropRightWhile = (arr, func) => {
