@@ -378,11 +378,9 @@ const differenceWith = (arr, val, comp) => arr.filter(a => val.findIndex(b => co
 differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Math.round(b)); // [1, 1.2]
 ```
 
-
-
 ### drop
 
-返回一个新数组，删除原数组下标`n`左侧的元素。
+返回一个新数组，从原数组左边删除`n`个元素。
 
 使用 `Array.prototype.slice()` 从左侧删除指定数量的元素。
 
@@ -403,7 +401,7 @@ drop([1, 2, 3], 42); // []
 
 ### dropRight
 
-返回一个新数组，删除原数组下标`n`右侧的元素。
+返回一个新数组，从原数组右边删除`n`个元素。
 
 使用 `Array.prototype.slice()`从右边删除指定数目的元素。
 
