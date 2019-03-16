@@ -464,9 +464,9 @@ dropWhile([1, 2, 3, 4], n => n >= 3); // [3,4]
 
 ### everyNth
 
-Returns every nth element in an array.
+返回数组中所有下标是n的倍数的元素。
 
-Use `Array.prototype.filter()` to create a new array that contains every nth element of a given array.
+使用 `Array.prototype.filter()` 创建包含给定数组中所有下标是n的倍数的元素的新数组。
 
 ```js
 const everyNth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
