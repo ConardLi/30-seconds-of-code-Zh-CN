@@ -1229,9 +1229,10 @@ filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true, {}, 'sample', 1]
 
 ### filterNonUnique
 
-Filters out the non-unique values in an array.
+过滤调数组中重复的值。
 
-Use `Array.prototype.filter()` for an array containing only the unique values.
+使用 `Array.prototype.filter()`创建一个只包含谓唯一值的数组。
+
 
 ```js
 const filterNonUnique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
