@@ -1202,13 +1202,19 @@ everyNth([1, 2, 3, 4, 5, 6], 2); // [ 2, 4, 6 ]
 
 ### filterFalsy
 
-Filters out the falsy values in an array.
+把数组中的`虚值`过滤掉。
 
-Use `Array.prototype.filter()` to get an array containing only truthy values.
+使用 `Array.prototype.filter()`创建一个只包含`真值`的新数组。 
+
 
 ```js
 const filterFalsy = arr => arr.filter(Boolean);
 ```
+
+> `falsy`(虚值)是在` Boolean `上下文中已认定可转换为‘假‘的值。例如：false，0，""，null，undefined 和 NaN 。
+
+> `Truthy` (真值)指的是在 布尔值 上下文中转换后的值为真的值。所有值都是真值，除非它们被定义为 `falsy`。
+
 
 <details>
 <summary>示例</summary>
