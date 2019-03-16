@@ -505,12 +505,15 @@ filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true, {}, 'sample', 1]
 
 过滤调数组中重复的值。
 
-使用 `Array.prototype.filter()`创建一个只包含谓唯一值的数组。
+使用 `Array.prototype.filter()`创建一个只包含唯一值的数组。
 
 ```js
 const filterNonUnique = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
 ```
 
+> filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 
+
+> filter 不会改变原数组，它返回过滤后的新数组。
 
 示例
 
@@ -519,13 +522,13 @@ filterNonUnique([1, 2, 2, 3, 4, 4, 5]); // [1, 3, 5]
 ```
 
 
-
 ### filterNonUniqueBy
 
-Filters out the non-unique values in an array, based on a provided comparator function.
+基于给定的比较器函数，过滤掉数组中重复的元素。
 
-Use `Array.prototype.filter()` and `Array.prototype.every()` for an array containing only the unique values, based on the comparator function, `fn`.
-The comparator function takes four arguments: the values of the two elements being compared and their indexes.
+使用`Array.prototype.filter()` 和 `Array.prototype.every()` 创建一个新数组，该数组只包含唯一值，基于给定的比较器函数 `fn`。
+
+比较器函数接收四个参数：正在被比较的两个元素和他们的索引。
 
 ```js
 const filterNonUniqueBy = (arr, fn) =>
@@ -547,9 +550,6 @@ filterNonUniqueBy(
   (a, b) => a.id == b.id
 ); // [ { id: 2, value: 'c' } ]
 ```
-
-
-
 
 
 ### findLast
