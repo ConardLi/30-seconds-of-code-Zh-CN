@@ -554,9 +554,9 @@ filterNonUniqueBy(
 
 ### findLast
 
-Returns the last element for which the provided function returns a truthy value.
+返回所提供函数返回`真值`的最后一个元素。
 
-Use `Array.prototype.filter()` to remove elements for which `fn` returns falsey values, `Array.prototype.pop()` to get the last one.
+使用 `Array.prototype.filter()` 将调用`fn`后返回`虚值`的元素过滤掉, 然后调用`Array.prototype.pop()` 来获取最后一个元素。
 
 ```js
 const findLast = (arr, fn) => arr.filter(fn).pop();
@@ -568,8 +568,6 @@ const findLast = (arr, fn) => arr.filter(fn).pop();
 ```js
 findLast([1, 2, 3, 4], n => n % 2 === 1); // 3
 ```
-
-
 
 
 
