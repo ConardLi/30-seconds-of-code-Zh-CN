@@ -573,10 +573,10 @@ findLast([1, 2, 3, 4], n => n % 2 === 1); // 3
 
 ### findLastIndex
 
-Returns the index of the last element for which the provided function returns a truthy value.
+返回所提供函数返回`真值`的最后一个元素的索引。
 
-Use `Array.prototype.map()` to map each element to an array with its index and value.
-Use `Array.prototype.filter()` to remove elements for which `fn` returns falsey values, `Array.prototype.pop()` to get the last one.
+使用 `Array.prototype.map()` 将每个元素映射到具有其索引和值的数组。
+使用 `Array.prototype.filter()` 将调用`fn`后返回`虚值`的元素过滤掉, 然后调用`Array.prototype.pop()` 来获取最后一个元素的索引。
 
 ```js
 const findLastIndex = (arr, fn) =>
