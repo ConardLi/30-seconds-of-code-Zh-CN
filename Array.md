@@ -594,17 +594,14 @@ findLastIndex([1, 2, 3, 4], n => n % 2 === 1); // 2 (index of the value 3)
 ```
 
 
-
-
-
 ### flatten
 
-Flattens an array up to the specified depth.
+根据指定的深度展平一个数组。
 
-Use recursion, decrementing `depth` by 1 for each level of depth.
-Use `Array.prototype.reduce()` and `Array.prototype.concat()` to merge elements or arrays.
-Base case, for `depth` equal to `1` stops recursion.
-Omit the second argument, `depth` to flatten only to a depth of `1` (single flatten).
+使用递归，每层递归 `depth` 递减1。
+使用 `Array.prototype.reduce()` 和 `Array.prototype.concat()` 来合并数组或者元素。
+基本情况下，当`depth` 等于1时停止递归。
+忽略第二个参数的情况下， `depth` 默认为1（单层展开）。
 
 ```js
 const flatten = (arr, depth = 1) =>
