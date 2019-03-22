@@ -175,6 +175,23 @@ fn(9, 3); // [81, 6]
 const pipeAsyncFunctions = (...fns) => arg => fns.reduce((p, f) => p.then(f), Promise.resolve(arg));
 ```
 
+> arr.reduce(callback[, initialValue])
+
+```
+callback
+执行数组中每个值的函数，包含四个参数：
+    accumulator
+    累计器累计回调的返回值; 它是上一次调用回调时返回的累积值，或initialValue（见于下方）。
+    currentValue
+    数组中正在处理的元素。
+    currentIndex可选
+    数组中正在处理的当前元素的索引。 如果提供了initialValue，则起始索引号为0，否则为1。
+    array可选
+    调用reduce()的数组
+initialValue可选
+作为第一次调用 callback函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。
+```
+
 
 示例
 
