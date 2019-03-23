@@ -1359,9 +1359,11 @@ flatten([1, [2, [3, [4, 5], 6], 7], 8], 2); // [1, 2, 3, [4, 5], 6, 7, 8]
 
 ### forEachRight
 
-Executes a provided function once for each array element, starting from the array's last element.
+对数组中的每个元素执行一次所提供的函数，从数组的最后一个元素开始。
 
-Use `Array.prototype.slice(0)` to clone the given array, `Array.prototype.reverse()` to reverse it and `Array.prototype.forEach()` to iterate over the reversed array.
+
+使用 `Array.prototype.slice(0)` 克隆给定的数组，并使用`Array.prototype.reverse()` 将它反转，然后使用`Array.prototype.forEach()`遍历反转后的数组。
+
 
 ```js
 const forEachRight = (arr, callback) =>
