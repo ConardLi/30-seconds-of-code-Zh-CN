@@ -1386,10 +1386,11 @@ forEachRight([1, 2, 3, 4], val => console.log(val)); // '4', '3', '2', '1'
 
 ### groupBy
 
-Groups the elements of an array based on the given function.
+基于给定的函数将数组分组。
 
-Use `Array.prototype.map()` to map the values of an array to a function or property name.
-Use `Array.prototype.reduce()` to create an object, where the keys are produced from the mapped results.
+使用 `Array.prototype.map()` 将组数中的值映射到一个函数或者属性名。
+
+使用 `Array.prototype.reduce()` 创建一个对象，其中的键由映射的结果生成。
 
 ```js
 const groupBy = (arr, fn) =>
