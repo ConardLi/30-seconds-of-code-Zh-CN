@@ -723,15 +723,20 @@ initial([1, 2, 3]); // [1,2]
 
 ### initialize2DArray
 
-Initializes a 2D array of given width and height and value.
+根据给定的宽、高和值初始化一个二维数组。
 
-Use `Array.prototype.map()` to generate h rows where each is a new array of size w initialize with value. If the value is not provided, default to `null`.
+使用 `Array.prototype.map()` 生成`h`行，其中每一行都是大小为`w`的新数组，并用值初始化。如果没有提供该值，则默认为`null`。
+
 
 ```js
 const initialize2DArray = (w, h, val = null) =>
   Array.from({ length: h }).map(() => Array.from({ length: w }).fill(val));
 ```
 
+> Array.from() 可以通过以下方式来创建数组对象：
+>
+>- 伪数组对象（拥有一个 length 属性和若干索引属性的任意对象） 例： `Array.from({ length: 10 })`
+>- 可迭代对象（可以获取对象中的元素,如 Map和 Set 等）
 
 示例
 
@@ -761,9 +766,6 @@ initializeArrayWithRange(5); // [0,1,2,3,4,5]
 initializeArrayWithRange(7, 3); // [3,4,5,6,7]
 initializeArrayWithRange(9, 0, 2); // [0,2,4,6,8]
 ```
-
-
-
 
 
 ### initializeArrayWithRangeRight
