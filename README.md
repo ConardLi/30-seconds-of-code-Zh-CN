@@ -1435,11 +1435,10 @@ head([1, 2, 3]); // 1
 
 ### indexOfAll
 
-Returns all indices of `val` in an array.
-If `val` never occurs, returns `[]`.
+返回一个数组中所有 `val` 的索引。
+如果 `val` 不存在，返回 `[]` 。
 
-Use `Array.prototype.reduce()` to loop over elements and store indices for matching elements.
-Return the array of indices.
+使用 `Array.prototype.reduce()` 遍历元素，将匹配的元素索引存储下来，返回索引数组。
 
 ```js
 const indexOfAll = (arr, val) => arr.reduce((acc, el, i) => (el === val ? [...acc, i] : acc), []);
