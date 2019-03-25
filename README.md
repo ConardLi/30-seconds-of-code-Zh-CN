@@ -1501,12 +1501,12 @@ initialize2DArray(2, 2, 0); // [[0,0], [0,0]]
 
 ### initializeArrayWithRange
 
-Initializes an array containing the numbers in the specified range where `start` and `end` are inclusive with their common difference `step`.
+初始化一个数组，该数组包括从 `start` 到 `end` 指定范围的数字，并且包括共同的公差 `step` 。
 
-Use `Array.from()` to create an array of the desired length, `(end - start + 1)/step`, and a map function to fill it with the desired values in the given range.
-You can omit `start` to use a default value of `0`.
-You can omit `step` to use a default value of `1`.
+使用 `Array.from()` 创建一个所需长度 `(end - start + 1)/step` 的数组，然后指定一个匹配函数将指定范围内的所需值填充到数组中。
 
+你可以省略 `start` 使用默认值`0`;
+你可以省略 `step` 使用默认值`1`;
 ```js
 const initializeArrayWithRange = (end, start = 0, step = 1) =>
   Array.from({ length: Math.ceil((end - start + 1) / step) }, (v, i) => i * step + start);
