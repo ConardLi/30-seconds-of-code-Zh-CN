@@ -751,8 +751,8 @@ initialize2DArray(2, 2, 0); // [[0,0], [0,0]]
 
 使用 `Array.from()` 创建一个所需长度 `(end - start + 1)/step` 的数组，然后指定一个匹配函数将指定范围内的所需值填充到数组中。
 
-你可以省略 `start` 使用默认值`0`;
-你可以省略 `step` 使用默认值`1`;
+你可以省略 `start` 使用默认值`0`。
+你可以省略 `step` 使用默认值`1`。
 
 ```js
 const initializeArrayWithRange = (end, start = 0, step = 1) =>
@@ -772,11 +772,12 @@ initializeArrayWithRange(9, 0, 2); // [0,2,4,6,8]
 
 ### initializeArrayWithRangeRight
 
-Initializes an array containing the numbers in the specified range (in reverse) where `start` and `end` are inclusive with their common difference `step`.
+初始化一个数组，该数组包括从 `start` 到 `end` 指定范围的数字（反向的），并且包括共同的公差 `step` 。
 
-Use `Array.from(Math.ceil((end+1-start)/step))` to create an array of the desired length(the amounts of elements is equal to `(end-start)/step` or `(end+1-start)/step` for inclusive end), `Array.prototype.map()` to fill with the desired values in a range.
-You can omit `start` to use a default value of `0`.
-You can omit `step` to use a default value of `1`.
+使用 `Array.from(Math.ceil((end+1-start)/step))` 创建一个期望长度的数组（为了兼容结束，元素的数量等同于`(end-start)/step` 或 `(end+1-start)/step`），使用`Array.prototype.map()`来填充期望范围内的值。
+
+你可以省略 `start` 使用默认值`0`。
+你可以省略 `step` 使用默认值`1`。
 
 ```js
 const initializeArrayWithRangeRight = (end, start = 0, step = 1) =>
