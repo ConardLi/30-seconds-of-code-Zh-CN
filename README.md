@@ -1555,10 +1555,12 @@ initializeArrayWithRangeRight(9, 0, 2); // [8,6,4,2,0]
 
 ### initializeArrayWithValues
 
-Initializes and fills an array with the specified values.
+初始化一个数组，并且使用指定的值填充它。
 
-Use `Array(n)` to create an array of the desired length, `fill(v)` to fill it with the desired values.
-You can omit `val` to use a default value of `0`.
+使用 `Array(n)` 创建一个期望长度的数组，使用 `fill(v)` 用期望的值填充数组。
+
+你可以省略参数 `val` 使用默认值`0`。
+
 
 ```js
 const initializeArrayWithValues = (n, val = 0) => Array(n).fill(val);
