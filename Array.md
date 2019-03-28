@@ -837,7 +837,6 @@ initializeNDArray(1, 3); // [1,1,1]
 initializeNDArray(5, 2, 2, 2); // [[[5,5],[5,5]],[[5,5],[5,5]]]
 ```
 
-
 ### intersection
 
 返回两个数组中都存在的元素列表。
@@ -851,19 +850,17 @@ const intersection = (a, b) => {
 };
 ```
 
-
 示例
 
 ```js
 intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
 ```
 
-
 ### intersectionBy
 
-Returns a list of elements that exist in both arrays, after applying the provided function to each array element of both.
+将提供的函数应应用到两个数组的每个元素上，然后返回两个数组中都存在的元素列表
 
-Create a `Set` by applying `fn` to all elements in `b`, then use `Array.prototype.filter()` on `a` to only keep elements, which produce values contained in `b` when `fn` is applied to them.
+通过将 `fn` 应用到 `b`的所有元素来创建一个 `Set`，然后在 `a` 上调用 `Array.prototype.filter()` 来只保留调用 `fn` 后 `b` 中包含的元素。
 
 ```js
 const intersectionBy = (a, b, fn) => {
@@ -878,9 +875,6 @@ const intersectionBy = (a, b, fn) => {
 ```js
 intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [2.1]
 ```
-
-
-
 
 
 ### intersectionWith
