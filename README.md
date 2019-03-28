@@ -1579,10 +1579,9 @@ initializeArrayWithValues(5, 2); // [2, 2, 2, 2, 2]
 
 ### initializeNDArray
 
-Create a n-dimensional array with given value.
+使用给定的值创建一个n维数组。
 
-Use recursion.
-Use `Array.prototype.map()` to generate rows where each is a new array initialized using `initializeNDArray`.
+使用递归。使用 `Array.prototype.map()` 来生成行，这些行每一个都是使用`initializeNDArray`初始化的新数组。
 
 ```js
 const initializeNDArray = (val, ...args) =>
