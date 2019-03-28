@@ -838,14 +838,11 @@ initializeNDArray(5, 2, 2, 2); // [[[5,5],[5,5]],[[5,5],[5,5]]]
 ```
 
 
-
-
-
 ### intersection
 
-Returns a list of elements that exist in both arrays.
+返回两个数组中都存在的元素列表。
 
-Create a `Set` from `b`, then use `Array.prototype.filter()` on `a` to only keep values contained in `b`.
+从 `b`创建一个 `Set` ，然后在`a`上使用`Array.prototype.filter()`来只保留 `b`中包含的元素。
 
 ```js
 const intersection = (a, b) => {
@@ -860,9 +857,6 @@ const intersection = (a, b) => {
 ```js
 intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
 ```
-
-
-
 
 
 ### intersectionBy
