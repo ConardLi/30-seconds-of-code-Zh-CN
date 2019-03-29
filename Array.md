@@ -879,23 +879,21 @@ intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [2.1]
 
 ### intersectionWith
 
-Returns a list of elements that exist in both arrays, using a provided comparator function.
+返回两个数组中都存在的元素列表，使用给定的比较函数。
 
-Use `Array.prototype.filter()` and `Array.prototype.findIndex()` in combination with the provided comparator to determine intersecting values.
+结合使用`Array.prototype.filter()`和 `Array.prototype.findIndex()` 来确定交叉值。
 
 ```js
 const intersectionWith = (a, b, comp) => a.filter(x => b.findIndex(y => comp(x, y)) !== -1);
 ```
 
+> findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
 
 示例
 
 ```js
 intersectionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) === Math.round(b)); // [1.5, 3, 0]
 ```
-
-
-
 
 
 ### isSorted
