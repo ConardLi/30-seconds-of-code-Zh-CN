@@ -1673,11 +1673,9 @@ intersectionWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0, 3.9], (a, b) => Math.round(a) 
 
 ### isSorted
 
-Returns `1` if the array is sorted in ascending order, `-1` if it is sorted in descending order or `0` if it is not sorted.
+如果数组是升序排序的，返回 `1` ，如果数组是降序排序的返回 `-1`，如果数组没有排序返回`0` 。
 
-Calculate the ordering `direction` for the first two elements.
-Use `Object.entries()` to loop over array objects and compare them in pairs.
-Return `0` if the `direction` changes or the `direction` if the last element is reached.
+计算前两个元素的顺序 `direction`。使用 `Object.entries()` 来遍历数组，病成对比较。如果 `direction` 改变，返回 `0` ，如果到达最后一个元素，返回 `direction` 。
 
 ```js
 const isSorted = arr => {
