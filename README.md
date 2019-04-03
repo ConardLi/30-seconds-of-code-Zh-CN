@@ -1703,12 +1703,11 @@ isSorted([4, 3, 5]); // 0
 
 ### join
 
-Joins all elements of an array into a string and returns this string.
-Uses a separator and an end separator.
+将数组中所有的元素连接成一个字符串，并返回这个字符串。使用一个分隔符和结束分隔符。
 
-Use `Array.prototype.reduce()` to combine elements into a string.
-Omit the second argument, `separator`, to use a default separator of `','`.
-Omit the third argument, `end`, to use the same value as `separator` by default.
+使用 `Array.prototype.reduce()` 将元素合并成字符串。
+忽略第二个参数，`separator`，默认情况下使用一个默认分隔符`','`。
+忽略第三个参数， `end`，使用和`separator`相同的值作为默认值。
 
 ```js
 const join = (arr, separator = ',', end = separator) =>
