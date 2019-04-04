@@ -1737,12 +1737,14 @@ join(['pen', 'pineapple', 'apple', 'pen']); // "pen,pineapple,apple,pen"
 
 ### JSONtoCSV ![advanced](/advanced.svg)
 
-Converts an array of objects to a comma-separated values (CSV) string that contains only the `columns` specified.
+将对象数组转换为仅包含指定的`columns`的逗号分隔值`(CSV)`字符串。
 
-Use `Array.prototype.join(delimiter)` to combine all the names in `columns` to create the first row.
-Use `Array.prototype.map()` and `Array.prototype.reduce()` to create a row for each object, substituting non-existent values with empty strings and only mapping values in `columns`.
-Use `Array.prototype.join('\n')` to combine all rows into a string.
-Omit the third argument, `delimiter`, to use a default delimiter of `,`.
+使用 `Array.prototype.join(delimiter)` 合并`columns`中的所有名称以创建第一行。、
+
+使用 `Array.prototype.map()` 和 `Array.prototype.reduce()` 为每个对象创建一行，用空字符串替换不存在的值，只映射“列”中的值。
+
+使用` Array.prototype.join('\n') `将所有行组合成一个字符串。
+忽略第三个参数 `delimiter`,使用默认分隔符 `,`。
 
 ```js
 const JSONtoCSV = (arr, columns, delimiter = ',') =>
