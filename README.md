@@ -1735,7 +1735,7 @@ join(['pen', 'pineapple', 'apple', 'pen']); // "pen,pineapple,apple,pen"
 
 <br>[⬆ 回到顶部](#目录)
 
-### JSONtoCSV ![advanced](/advanced.svg)
+### JSONtoCSV 
 
 将对象数组转换为仅包含指定的`columns`的逗号分隔值`(CSV)`字符串。
 
