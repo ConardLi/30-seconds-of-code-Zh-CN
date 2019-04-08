@@ -1773,9 +1773,9 @@ JSONtoCSV([{ a: 1, b: 2 }, { a: 3, b: 4, c: 5 }, { a: 6 }, { b: 7 }], ['a', 'b']
 
 ### last
 
-Returns the last element in an array.
+返回数组中最后一个元素。
 
-Use `arr.length - 1` to compute the index of the last element of the given array and returning it.
+使用 `arr.length - 1` 来计算给定数组最后一个元素的索引，然后返回它。
 
 ```js
 const last = arr => arr[arr.length - 1];
