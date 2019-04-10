@@ -1036,7 +1036,6 @@ last([1, 2, 3]); // 3
 const longestItem = (...vals) => vals.reduce((a, x) => (x.length > a.length ? x : a));
 ```
 
-
 示例
 
 ```js
@@ -1047,13 +1046,11 @@ longestItem([1, 2, 3], [1, 2], [1, 2, 3, 4, 5]); // [1, 2, 3, 4, 5]
 longestItem([1, 2, 3], 'foobar'); // 'foobar'
 ```
 
+### mapObject
 
+使用函数将数组的值映射到对象，其中键值对由作为键的原始值和映射的值组成。
 
-### mapObject ![advanced](/advanced.svg)
-
-Maps the values of an array to an object using a function, where the key-value pairs consist of the original value as the key and the mapped value.
-
-Use an anonymous inner function scope to declare an undefined memory space, using closures to store a return value. Use a new `Array` to store the array with a map of the function over its data set and a comma operator to return a second step, without needing to move from one context to another (due to closures and order of operations).
+使用匿名内部函数作用域声明未定义的内存空间，使用闭包存储返回值。使用一个新的 `Array` 来存储数组，其中包含函数在其数据集上的映射，并使用逗号操作符返回第二个步骤，而不需要从一个上下文移动到另一个上下文(由于闭包和操作顺序)。
 
 ```js
 const mapObject = (arr, fn) =>
@@ -1069,9 +1066,6 @@ const mapObject = (arr, fn) =>
 const squareIt = arr => mapObject(arr, a => a * a);
 squareIt([1, 2, 3]); // { 1: 1, 2: 4, 3: 9 }
 ```
-
-
-
 
 
 ### maxN

@@ -1822,11 +1822,11 @@ longestItem([1, 2, 3], 'foobar'); // 'foobar'
 
 <br>[⬆ 回到顶部](#目录)
 
-### mapObject ![advanced](/advanced.svg)
+### mapObject 
 
-Maps the values of an array to an object using a function, where the key-value pairs consist of the original value as the key and the mapped value.
+使用函数将数组的值映射到对象，其中键值对由作为键的原始值和映射的值组成。
 
-Use an anonymous inner function scope to declare an undefined memory space, using closures to store a return value. Use a new `Array` to store the array with a map of the function over its data set and a comma operator to return a second step, without needing to move from one context to another (due to closures and order of operations).
+使用匿名内部函数作用域声明未定义的内存空间，使用闭包存储返回值。使用一个新的 `Array` 来存储数组，其中包含函数在其数据集上的映射，并使用逗号操作符返回第二个步骤，而不需要从一个上下文移动到另一个上下文(由于闭包和操作顺序)。
 
 ```js
 const mapObject = (arr, fn) =>
