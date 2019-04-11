@@ -1874,12 +1874,12 @@ maxN([1, 2, 3], 2); // [3,2]
 
 ### minN
 
-Returns the `n` minimum elements from the provided array.
-If `n` is greater than or equal to the provided array's length, then return the original array (sorted in ascending order).
+返回给定数组中前 `n` 小的元素。
+如果 `n` 比给定的数组长度还要大，返回原始数组（按升序排列）。
 
-Use `Array.prototype.sort()` combined with the spread operator (`...`) to create a shallow clone of the array and sort it in ascending order.
-Use `Array.prototype.slice()` to get the specified number of elements.
-Omit the second argument, `n`, to get a one-element array.
+使用 `Array.prototype.sort()` 结合展开操作符 (`...`) 创建一个数组的浅克隆，并按照升序排序。
+使用 `Array.prototype.slice()` 获取指定数量的元素。
+忽略第二个参数, `n`, 返回一个单元素数组。
 
 ```js
 const minN = (arr, n = 1) => [...arr].sort((a, b) => a - b).slice(0, n);
