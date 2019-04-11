@@ -1849,12 +1849,12 @@ squareIt([1, 2, 3]); // { 1: 1, 2: 4, 3: 9 }
 
 ### maxN
 
-Returns the `n` maximum elements from the provided array.
-If `n` is greater than or equal to the provided array's length, then return the original array (sorted in descending order).
+返回给定数组中前 `n` 大的元素。
+如果 `n` 比给定的数组长度还要大，返回原始数组（按降序排列）。
 
-Use `Array.prototype.sort()` combined with the spread operator (`...`) to create a shallow clone of the array and sort it in descending order.
-Use `Array.prototype.slice()` to get the specified number of elements.
-Omit the second argument, `n`, to get a one-element array.
+使用 `Array.prototype.sort()` 结合展开操作符 (`...`) 创建一个数组的浅克隆，并按照降序排序。
+使用 `Array.prototype.slice()` 获取指定数量的元素。
+忽略第二个参数, `n`, 返回一个单元素数组。
 
 ```js
 const maxN = (arr, n = 1) => [...arr].sort((a, b) => b - a).slice(0, n);
