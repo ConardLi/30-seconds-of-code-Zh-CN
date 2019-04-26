@@ -1923,11 +1923,13 @@ none([0, 0, 0]); // true
 
 ### nthElement
 
-Returns the nth element of an array.
+返回数组中第`n`个元素(`n`可以是负数)。
 
-Use `Array.prototype.slice()` to get an array containing the nth element at the first place.
-If the index is out of bounds, return `undefined`.
-Omit the second argument, `n`, to get the first element of the array.
+使用`Array.prototype.slice()`获得在首位包含第`n`个元素的数组。
+
+如果下标越界，返回`undefined`。
+
+如果没有第二个参数，`n`，返回数组中第一个元素。
 
 ```js
 const nthElement = (arr, n = 0) => (n === -1 ? arr.slice(n) : arr.slice(n, n + 1))[0];
