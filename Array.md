@@ -1112,10 +1112,11 @@ minN([1, 2, 3], 2); // [1,2]
 
 ### none
 
-Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.
+如果对集合中所有的元素执行判定函数全部都返回`false`，那么函数返回`true`，否则返回`false`。
 
-Use `Array.prototype.some()` to test if any elements in the collection return `true` based on `fn`.
-Omit the second argument, `fn`, to use `Boolean` as a default.
+基于`fn`使用`Array.prototype.some()`来测试是否集合中有任意一个元素返回`true`。
+
+忽略第二个参数，`fn`，使用`Boolean`作为默认值。
 
 ```js
 const none = (arr, fn = Boolean) => !arr.some(fn);
