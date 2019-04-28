@@ -1157,16 +1157,17 @@ nthElement(['a', 'b', 'b'], -3); // 'a'
 
 ### offset
 
-Moves the specified amount of elements to the end of the array.
+将指定数量的元素移动到数组的末尾。
 
-Use `Array.prototype.slice()` twice to get the elements after the specified index and the elements before that.
-Use the spread operator(`...`) to combine the two into one array.
-If `offset` is negative, the elements will be moved from end to start.
+使用 `Array.prototype.slice()` 两次来获取指定索引后面的元素和前面的元素。
+
+使用扩展操作符(`...`)将两个数组合并成一个数组。
+
+如果`offset`是负，元素将被从末尾移动到开始。
 
 ```js
 const offset = (arr, offset) => [...arr.slice(offset), ...arr.slice(0, offset)];
 ```
-
 
 示例
 
@@ -1174,9 +1175,6 @@ const offset = (arr, offset) => [...arr.slice(offset), ...arr.slice(0, offset)];
 offset([1, 2, 3, 4, 5], 2); // [3, 4, 5, 1, 2]
 offset([1, 2, 3, 4, 5], -2); // [4, 5, 1, 2, 3]
 ```
-
-
-
 
 
 ### partition
