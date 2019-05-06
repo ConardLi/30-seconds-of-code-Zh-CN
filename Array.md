@@ -1179,10 +1179,11 @@ offset([1, 2, 3, 4, 5], -2); // [4, 5, 1, 2, 3]
 
 ### partition
 
-Groups the elements into two arrays, depending on the provided function's truthiness for each element.
+根据提供的函数对每个元素的真实性，将元素分组为两个数组。
 
-Use `Array.prototype.reduce()` to create an array of two arrays.
-Use `Array.prototype.push()` to add elements for which `fn` returns `true` to the first array and elements for which `fn` returns `false` to the second one.
+使用`Array.prototype.reduce()`创建一个由两个数组组成的数组。
+
+使用`Array.prototype.push()`将执行`fn`返回`true`的元素添加到第一个数组，执行`fn`返回`false`的元素添加到第二个数组。
 
 ```js
 const partition = (arr, fn) =>
@@ -1203,20 +1204,17 @@ const users = [{ user: 'barney', age: 36, active: false }, { user: 'fred', age: 
 partition(users, o => o.active); // [[{ 'user': 'fred',    'age': 40, 'active': true }],[{ 'user': 'barney',  'age': 36, 'active': false }]]
 ```
 
+### permutations 
 
+生成数组元素的所有排列(包括重复元素)
 
+使用递归。
 
+对于给定数组中的每个元素，为其其余元素创建所有部分排列。
 
-### permutations ![advanced](/advanced.svg)
+使用`Array.prototype.map()`组合每个元素的部分排列，然后使用`Array.prototype.reduce()`组合一个数组中的所有排列。
 
-⚠️ **WARNING**: This function's execution time increases exponentially with each array element. Anything more than 8 to 10 entries will cause your browser to hang as it tries to solve all the different combinations.
-
-Generates all permutations of an array's elements (contains duplicates).
-
-Use recursion.
-For each element in the given array, create all the partial permutations for the rest of its elements.
-Use `Array.prototype.map()` to combine the element with each partial permutation, then `Array.prototype.reduce()` to combine all permutations in one array.
-Base cases are for array `length` equal to `2` or `1`.
+基本情况是数组`length` 等于 `2` 或 `1`。
 
 ```js
 const permutations = arr => {
