@@ -1325,10 +1325,11 @@ let pulled = pullAtValue(myArray, ['b', 'd']); // myArray = [ 'a', 'c' ] , pulle
 
 ### reducedFilter
 
-Filter an array of objects based on a condition while also filtering out unspecified keys.
+根据一个条件过滤对象数组，同时过滤掉未指定的键。
 
-Use `Array.prototype.filter()` to filter the array based on the predicate `fn` so that it returns the objects for which the condition returned a truthy value.
-On the filtered array, use `Array.prototype.map()` to return the new object using `Array.prototype.reduce()` to filter out the keys which were not supplied as the `keys` argument.
+使用`Array.prototype.filter()`根据判定函数`fn`对数组进行过滤，返回条件返回`true`值的对象。
+
+在过滤后的数组的基础上，使用 `Array.prototype.map()` 返回使用 `Array.prototype.reduce()` 将不在参数`keys`中的属性过滤掉后的新对象。
 
 ```js
 const reducedFilter = (data, keys, fn) =>
@@ -1339,7 +1340,6 @@ const reducedFilter = (data, keys, fn) =>
     }, {})
   );
 ```
-
 
 示例
 
@@ -1359,9 +1359,6 @@ const data = [
 
 reducedFilter(data, ['id', 'name'], item => item.age > 24); // [{ id: 2, name: 'mike'}]
 ```
-
-
-
 
 
 ### reduceSuccessive
