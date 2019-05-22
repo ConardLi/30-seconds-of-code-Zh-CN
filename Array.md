@@ -1383,10 +1383,11 @@ reduceSuccessive([1, 2, 3, 4, 5, 6], (acc, val) => acc + val, 0); // [0, 1, 3, 6
 
 ### reduceWhich
 
-Returns the minimum/maximum value of an array, after applying the provided function to set comparing rule.
+将给定的函数设置比较规则后，返回数组的最小/最大值。
 
-Use `Array.prototype.reduce()` in combination with the `comparator` function to get the appropriate element in the array.
-You can omit the second parameter, `comparator`, to use the default one that returns the minimum element in the array.
+结合使用`Array.prototype.reduce()` 和 `comparator`函数，以获取数组中的适当元素。
+
+你可以省略第二个参数， `comparator`，使用返回数组中最小元素的默认值。
 
 ```js
 const reduceWhich = (arr, comparator = (a, b) => a - b) =>
