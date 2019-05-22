@@ -1408,11 +1408,10 @@ reduceWhich(
 
 
 
-
-
 ### reject
 
-Takes a predicate and array, like `Array.prototype.filter()`, but only keeps `x` if `pred(x) === false`.
+
+接受一个判定函数和一个数组，像`Array.prototype.filter()`一样，但是仅仅当`pred(x) === false`才保留`x` 。
 
 ```js
 const reject = (pred, array) => array.filter((...args) => !pred(...args));
@@ -1425,9 +1424,6 @@ const reject = (pred, array) => array.filter((...args) => !pred(...args));
 reject(x => x % 2 === 0, [1, 2, 3, 4, 5]); // [1, 3, 5]
 reject(word => word.length > 4, ['Apple', 'Pear', 'Kiwi', 'Banana']); // ['Pear', 'Kiwi']
 ```
-
-
-
 
 
 ### remove
