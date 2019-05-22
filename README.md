@@ -2068,7 +2068,7 @@ pull(myArray, 'a', 'c'); // myArray = [ 'b', 'b' ]
 
 <br>[⬆ 回到顶部](#目录)
 
-### pullAtIndex ![advanced](/advanced.svg)
+### pullAtIndex 
 
 修改原始数组，以过滤指定索引处的值。
 
@@ -2100,13 +2100,16 @@ let pulled = pullAtIndex(myArray, [1, 3]); // myArray = [ 'a', 'c' ] , pulled = 
 
 <br>[⬆ 回到顶部](#目录)
 
-### pullAtValue ![advanced](/advanced.svg)
+### pullAtValue 
 
-Mutates the original array to filter out the values specified. Returns the removed elements.
+修改原始数组，以过滤掉指定的值。返回移除后的元素。
 
-Use `Array.prototype.filter()` and `Array.prototype.includes()` to pull out the values that are not needed.
-Use `Array.prototype.length = 0` to mutate the passed in an array by resetting it's length to zero and `Array.prototype.push()` to re-populate it with only the pulled values.
-Use `Array.prototype.push()` to keep track of pulled values
+使用`Array.prototype.filter()` 和 `Array.prototype.includes()`将不需要过滤的值提取出来。
+
+使用`Array.prototype。length = 0 `通过将数组的长度重置为`0`来改变数组中传递的值，并使用` array .prototype.push() `仅用提取的值重新填充数组。
+
+使用`Array.prototype.push() `跟踪拉取出来的值。
+
 
 ```js
 const pullAtValue = (arr, pullArr) => {
@@ -2131,38 +2134,6 @@ let pulled = pullAtValue(myArray, ['b', 'd']); // myArray = [ 'a', 'c' ] , pulle
 
 <br>[⬆ 回到顶部](#目录)
 
-### pullBy ![advanced](/advanced.svg)
-
-Mutates the original array to filter out the values specified, based on a given iterator function.
-
-Check if the last argument provided in a function.
-Use `Array.prototype.map()` to apply the iterator function `fn` to all array elements.
-Use `Array.prototype.filter()` and `Array.prototype.includes()` to pull out the values that are not needed.
-Use `Array.prototype.length = 0` to mutate the passed in an array by resetting it's length to zero and `Array.prototype.push()` to re-populate it with only the pulled values.
-
-```js
-const pullBy = (arr, ...args) => {
-  const length = args.length;
-  let fn = length > 1 ? args[length - 1] : undefined;
-  fn = typeof fn == 'function' ? (args.pop(), fn) : undefined;
-  let argState = (Array.isArray(args[0]) ? args[0] : args).map(val => fn(val));
-  let pulled = arr.filter((v, i) => !argState.includes(fn(v)));
-  arr.length = 0;
-  pulled.forEach(v => arr.push(v));
-};
-```
-
-<details>
-<summary>示例</summary>
-
-```js
-var myArray = [{ x: 1 }, { x: 2 }, { x: 3 }, { x: 1 }];
-pullBy(myArray, [{ x: 1 }, { x: 3 }], o => o.x); // myArray = [{ x: 2 }]
-```
-
-</details>
-
-<br>[⬆ 回到顶部](#目录)
 
 ### reducedFilter
 
